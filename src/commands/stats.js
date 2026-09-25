@@ -12,11 +12,11 @@ function formatUptime(ms) {
 
     const parts = [];
 
-    if (days) parts.push(`${days}ÙŠ`);
-    if (hours) parts.push(`${hours}Ø³`);
-    if (minutes) parts.push(`${minutes}Ø¯`);
+    if (days) parts.push(`${days}ي`);
+    if (hours) parts.push(`${hours}س`);
+    if (minutes) parts.push(`${minutes}د`);
     if (secs || parts.length === 0) {
-        parts.push(`${secs}Ø«`);
+        parts.push(`${secs}ث`);
     }
 
     return parts.join(" ");
@@ -75,38 +75,38 @@ module.exports = {
             const embed =
                 new EmbedBuilder()
                     .setColor("#808080")
-                    .setTitle("ðŸ“Š Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª anas")
+                    .setTitle("📊 إحصائيات anas")
                     .setDescription(
-                        "Ù‡Ø§ÙŠ Ø¥Ø­ØµØ§Ø¦ÙŠØ§ØªÙŠ Ø§Ù„Ø­ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
+                        "هاي إحصائياتي الحية الحالية."
                     )
                     .addFields(
                         {
-                            name: "ðŸŒ Ø§Ù„Ø³ÙŠØ±ÙØ±Ø§Øª",
+                            name: "🌐 السيرفرات",
                             value: `\`${guildCount}\``,
                             inline: true
                         },
                         {
-                            name: "ðŸ‘¥ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ†",
+                            name: "👥 المستخدمين",
                             value: `\`${userCount.toLocaleString()}\``,
                             inline: true
                         },
                         {
-                            name: "ðŸ“ Ø§Ù„Ø¨ÙŠÙ†Øº",
+                            name: "🏓 البينغ",
                             value: `\`${ping}\``,
                             inline: true
                         },
                         {
-                            name: "â±ï¸ Ù…Ø¯Ø© Ø§Ù„ØªØ´ØºÙŠÙ„",
+                            name: "⏱️ مدة التشغيل",
                             value: `\`${uptime}\``,
                             inline: true
                         },
                         {
-                            name: "ðŸŽµ Ø§Ù„Ù…Ø´ØºÙ„Ø§Øª Ø§Ù„ÙØ¹Ø§Ù„Ø©",
+                            name: "🎵 المشغلات الفعالة",
                             value: `\`${activePlayers}\``,
                             inline: true
                         },
                         {
-                            name: "ðŸŸ¢ Lavalink",
+                            name: "🟢 Lavalink",
                             value:
                                 totalNodes > 0
                                     ? `\`${connectedNodes}/${totalNodes}\``
@@ -114,23 +114,23 @@ module.exports = {
                             inline: true
                         },
                         {
-                            name: "ðŸ’¾ Ø§Ù„Ø°Ø§ÙƒØ±Ø©",
+                            name: "💾 الذاكرة",
                             value: `\`${formatMemory(memory.rss)}\``,
                             inline: true
                         },
                         {
-                            name: "ðŸ§  Heap",
+                            name: "🧠 Heap",
                             value: `\`${formatMemory(memory.heapUsed)} / ${formatMemory(memory.heapTotal)}\``,
                             inline: true
                         },
                         {
-                            name: "ðŸ¤– Discord.js",
+                            name: "🤖 Discord.js",
                             value: `\`v${require("discord.js").version}\``,
                             inline: true
                         }
                     )
                     .setFooter({
-                        text: "anas Music â€¢ Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª Ø­ÙŠØ©"
+                        text: "anas Music • إحصائيات حية"
                     })
                     .setTimestamp();
 
@@ -140,7 +140,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Stats command error:",
+                "❌ Stats command error:",
                 error
             );
 
@@ -149,11 +149,10 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª Ø§Ù„Ø¨ÙˆØª."
+                            "❌ صار في خطأ وحنا نجيب إحصائيات البوت."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
-

@@ -16,7 +16,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -30,7 +30,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù…Ø§ Ù‚Ø¯Ø±Øª Ø£Ø­Ø¯Ø¯ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
+                                "❌ Ù…Ø§ Ù‚Ø¯Ø±Øª Ø£Ø­Ø¯Ø¯ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
                             )
                     ]
                 });
@@ -71,7 +71,7 @@ module.exports = {
                             .setColor("#808080")
                             .setTitle(title)
                             .setDescription(
-                                `âŒ Ù…Ø§ Ù„Ù‚ÙŠØª ÙƒÙ„Ù…Ø§Øª Ù„Ù€ **${title}**.`
+                                `❌ Ù…Ø§ Ù„Ù‚ÙŠØª ÙƒÙ„Ù…Ø§Øª Ù„Ù€ **${title}**.`
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -96,12 +96,12 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle(`ðŸŽµ ${title}`)
+                .setTitle(`🎵 ${title}`)
                 .setDescription(
                     `**${artist}**\n\n${lyricsText}`
                 )
                 .setFooter({
-                    text: "anas Music â€¢ Ø§Ù„ÙƒÙ„Ù…Ø§Øª"
+                    text: "anas Music —¢ Ø§Ù„ÙƒÙ„Ù…Ø§Øª"
                 });
 
             await message.channel.send({
@@ -110,7 +110,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Lyrics command error:",
+                "❌ Lyrics command error:",
                 error
             );
 
@@ -119,7 +119,7 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„ÙƒÙ„Ù…Ø§Øª."
+                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„ÙƒÙ„Ù…Ø§Øª."
                         )
                 ]
             }).catch(() => {});

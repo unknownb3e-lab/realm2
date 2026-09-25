@@ -19,7 +19,7 @@ function formatDuration(ms) {
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`âŒ ${description}`);
+        .setDescription(`❌ ${description}`);
 }
 
 module.exports = {
@@ -84,7 +84,7 @@ module.exports = {
 
                 description +=
                     `**ÙŠØªÙ… Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¢Ù†**\n` +
-                    `ðŸŽµ **${title}**\n` +
+                    `🎵 **${title}**\n` +
                     `\`[${duration}]\`\n\n`;
             }
 
@@ -126,10 +126,10 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle("ðŸŽµ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ")
+                .setTitle("🎵 Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ")
                 .setDescription(description)
                 .setFooter({
-                    text: `anas Music â€¢ ${tracks.length} Ø£ØºÙ†ÙŠØ© Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©`
+                    text: `anas Music —¢ ${tracks.length} Ø£ØºÙ†ÙŠØ© Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©`
                 });
 
             await message.channel.send({
@@ -138,7 +138,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Queue command error:",
+                "❌ Queue command error:",
                 error
             );
 

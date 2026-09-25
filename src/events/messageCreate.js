@@ -54,12 +54,12 @@ module.exports = {
 
                 if (blacklisted) {
                     return message.reply(
-                        "ðŸš« Ø£Ù†Øª Ù…Ø­Ø¸ÙˆØ± Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas."
+                        "🚫 Ø£Ù†Øª Ù…Ø­Ø¸ÙˆØ± Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas."
                     ).catch(() => {});
                 }
             } catch (error) {
                 console.error(
-                    "âŒ Blacklist check error:",
+                    "❌ Blacklist check error:",
                     error
                 );
 
@@ -79,7 +79,7 @@ module.exports = {
             });
         } catch (error) {
             console.error(
-                `âŒ ${commandName} command error:`,
+                `❌ ${commandName} command error:`,
                 error
             );
 
@@ -87,7 +87,7 @@ module.exports = {
 
             await message.channel
                 .send(
-                    "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ù†ÙØ° Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                    "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ù†ÙØ° Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                 )
                 .catch(() => {});
         }

@@ -23,7 +23,7 @@ function formatDuration(ms) {
 
 function createProgressBar(position, duration) {
     if (!duration || duration <= 0) {
-        return "â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”";
+        return "━━━━━━━━━━━━━━━━━━━━";
     }
 
     const progress = Math.min(position / duration, 1);
@@ -31,9 +31,9 @@ function createProgressBar(position, duration) {
     const currentBlock = Math.floor(progress * totalBlocks);
 
     return (
-        "â–¬".repeat(Math.max(0, currentBlock)) +
-        "ðŸ”˜" +
-        "â–¬".repeat(Math.max(0, totalBlocks - currentBlock))
+        "▬".repeat(Math.max(0, currentBlock)) +
+        "🔘" +
+        "▬".repeat(Math.max(0, totalBlocks - currentBlock))
     );
 }
 
@@ -52,7 +52,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -66,7 +66,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -97,8 +97,8 @@ module.exports = {
 
             const status =
                 player.paused
-                    ? "â¸ï¸ Ù…ØªÙˆÙ‚ÙØ© Ù…Ø¤Ù‚ØªÙ‹Ø§"
-                    : "â–¶ï¸ ØªØ´ØªØºÙ„";
+                    ? "⏸️ Ù…ØªÙˆÙ‚ÙØ© Ù…Ø¤Ù‚ØªÙ‹Ø§"
+                    : "▶️ ØªØ´ØªØºÙ„";
 
             const requester =
                 track.requester
@@ -118,17 +118,17 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle(`ðŸŽµ ${title}`)
+                .setTitle(`🎵 ${title}`)
                 .setDescription(
                     `**${author}**\n\n` +
                     `${status}\n\n` +
                     `${progressBar}\n` +
                     `\`${position} / ${duration}\`\n\n` +
-                    `ðŸ”Š Ø§Ù„ØµÙˆØª: **${volume}%**\n` +
-                    `ðŸ‘¤ Ø·Ù„Ø¨Ù‡Ø§: ${requester}`
+                    `🔊 Ø§Ù„ØµÙˆØª: **${volume}%**\n` +
+                    `👤 Ø·Ù„Ø¨Ù‡Ø§: ${requester}`
                 )
                 .setFooter({
-                    text: "anas Music â€¢ ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù†"
+                    text: "anas Music —¢ ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù†"
                 });
 
             if (artwork) {
@@ -139,26 +139,26 @@ module.exports = {
                 new ActionRowBuilder().addComponents(
                     new ButtonBuilder()
                         .setCustomId("music_previous")
-                        .setEmoji("â®ï¸")
+                        .setEmoji("⏮️")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_pause")
                         .setEmoji(
                             player.paused
-                                ? "â–¶ï¸"
-                                : "â¸ï¸"
+                                ? "▶️"
+                                : "⏸️"
                         )
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_skip")
-                        .setEmoji("â­ï¸")
+                        .setEmoji("⏭️")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_stop")
-                        .setEmoji("â¹ï¸")
+                        .setEmoji("⏹️")
                         .setStyle(ButtonStyle.Secondary)
                 );
 
@@ -169,7 +169,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Now Playing command error:",
+                "❌ Now Playing command error:",
                 error
             );
 
@@ -178,7 +178,7 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
+                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
                         )
                 ]
             }).catch(() => {});

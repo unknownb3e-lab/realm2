@@ -12,7 +12,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setDescription("âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
+                            .setDescription("❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
                     ]
                 });
             }
@@ -25,7 +25,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                                "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
                     ]
                 });
@@ -40,7 +40,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                                "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
                     ]
                 });
@@ -51,7 +51,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setDescription("â–¶ï¸ Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ ØªØ´ØªØºÙ„ Ø£ØµÙ„Ø§Ù‹.")
+                            .setDescription("▶️ Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ ØªØ´ØªØºÙ„ Ø£ØµÙ„Ø§Ù‹.")
                     ]
                 });
             }
@@ -61,7 +61,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setDescription("â–¶ï¸ ØªÙ… Ø§Ø³ØªØ¦Ù†Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰.")
+                .setDescription("▶️ ØªÙ… Ø§Ø³ØªØ¦Ù†Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰.")
                 .setFooter({
                     text: "anas Music"
                 });
@@ -71,14 +71,14 @@ module.exports = {
             });
 
         } catch (error) {
-            console.error("âŒ Resume command error:", error);
+            console.error("❌ Resume command error:", error);
 
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø³ØªØ£Ù†Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰."
+                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø³ØªØ£Ù†Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰."
                         )
                 ]
             }).catch(() => {});

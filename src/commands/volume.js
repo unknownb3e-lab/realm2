@@ -3,7 +3,7 @@
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`âŒ ${description}`);
+        .setDescription(`❌ ${description}`);
 }
 
 module.exports = {
@@ -70,7 +70,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                `ðŸ”Š Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø§Ù„Ø­Ø§Ù„ÙŠ: **${currentVolume}%**`
+                                `🔊 Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø§Ù„Ø­Ø§Ù„ÙŠ: **${currentVolume}%**`
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -122,7 +122,7 @@ module.exports = {
             const embed = new EmbedBuilder()
                 .setColor("#808080")
                 .setDescription(
-                    `ðŸ”Š ØªÙ… Ø¶Ø¨Ø· Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø¹Ù„Ù‰ **${volume}%**.`
+                    `🔊 ØªÙ… Ø¶Ø¨Ø· Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø¹Ù„Ù‰ **${volume}%**.`
                 )
                 .setFooter({
                     text: "anas Music"
@@ -134,7 +134,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Volume command error:",
+                "❌ Volume command error:",
                 error
             );
 

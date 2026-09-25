@@ -59,7 +59,7 @@ module.exports = {
                             ? track.requester
                             : "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"
                     }\n` +
-                    `Ø§Ù„Ù…Ø¯Ø©: **${duration}** â€¢ Ø§Ù„ØµÙˆØª: **${volume}%**`
+                    `Ø§Ù„Ù…Ø¯Ø©: **${duration}** —¢ Ø§Ù„ØµÙˆØª: **${volume}%**`
                 )
                 .setFooter({
                     text: "anas Music"
@@ -72,34 +72,34 @@ module.exports = {
             const buttons = new ActionRowBuilder().addComponents(
                 new ButtonBuilder()
                     .setCustomId("music_previous")
-                    .setEmoji("â®ï¸")
+                    .setEmoji("⏮️")
                     .setStyle(ButtonStyle.Secondary),
 
                 new ButtonBuilder()
                     .setCustomId("music_pause")
-                    .setEmoji("â¸ï¸")
+                    .setEmoji("⏸️")
                     .setStyle(ButtonStyle.Secondary),
 
                 new ButtonBuilder()
                     .setCustomId("music_skip")
-                    .setEmoji("â­ï¸")
+                    .setEmoji("⏭️")
                     .setStyle(ButtonStyle.Secondary),
 
                 new ButtonBuilder()
                     .setCustomId("music_stop")
-                    .setEmoji("â¹ï¸")
+                    .setEmoji("⏹️")
                     .setStyle(ButtonStyle.Secondary)
             );
 
             await channel.send({
-                content: `ðŸŽµ ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù† **${title}**`,
+                content: `🎵 ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù† **${title}**`,
                 embeds: [embed],
                 components: [buttons]
             });
 
         } catch (error) {
             console.error(
-                "âŒ TrackStart event error:",
+                "❌ TrackStart event error:",
                 error
             );
         }

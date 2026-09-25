@@ -3,7 +3,7 @@
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`âŒ ${description}`);
+        .setDescription(`❌ ${description}`);
 }
 
 module.exports = {
@@ -72,8 +72,8 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                `ðŸ” ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ: **${displayMode}**\n\n` +
-                                `Ø§Ø³ØªØ®Ø¯Ù… \`>loop off\`ØŒ \`>loop song\` Ø£Ùˆ \`>loop queue\`.`
+                                `🔁 ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ: **${displayMode}**\n\n` +
+                                `Ø§Ø³ØªØ®Ø¯Ù… \`>loop off\`✅ \`>loop song\` Ø£Ùˆ \`>loop queue\`.`
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -101,7 +101,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ÙˆØ¶Ø¹ ØªÙƒØ±Ø§Ø± ØºÙŠØ± ØµØ­ÙŠØ­.\n\nØ§Ø³ØªØ®Ø¯Ù… `>loop off`ØŒ `>loop song` Ø£Ùˆ `>loop queue`."
+                            "ÙˆØ¶Ø¹ ØªÙƒØ±Ø§Ø± ØºÙŠØ± ØµØ­ÙŠØ­.\n\nØ§Ø³ØªØ®Ø¯Ù… `>loop off`✅ `>loop song` Ø£Ùˆ `>loop queue`."
                         )
                     ]
                 });
@@ -120,11 +120,11 @@ module.exports = {
             let description;
 
             if (repeatMode === "off") {
-                description = "ðŸ” ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ØªÙƒØ±Ø§Ø±.";
+                description = "🔁 ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ØªÙƒØ±Ø§Ø±.";
             } else if (repeatMode === "track") {
-                description = "ðŸ”‚ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ© Ø±Ø­ ØªØªÙƒØ±Ø±.";
+                description = "🔂 Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ© Ø±Ø­ ØªØªÙƒØ±Ø±.";
             } else {
-                description = "ðŸ” Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø±Ø­ ØªØªÙƒØ±Ø±.";
+                description = "🔁 Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø±Ø­ ØªØªÙƒØ±Ø±.";
             }
 
             const embed = new EmbedBuilder()
@@ -140,7 +140,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Loop command error:",
+                "❌ Loop command error:",
                 error
             );
 

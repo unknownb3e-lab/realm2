@@ -8,7 +8,7 @@ const {
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`âŒ ${description}`);
+        .setDescription(`❌ ${description}`);
 }
 
 module.exports = {
@@ -129,7 +129,7 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            `â®ï¸ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${title}**`
+                            `⏮️ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${title}**`
                         )
                         .setFooter({
                             text: "anas Music"
@@ -139,7 +139,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "âŒ Previous command error:",
+                "❌ Previous command error:",
                 error
             );
 

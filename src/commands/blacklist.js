@@ -32,7 +32,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ø¨Ø³ Ù…Ø§Ù„Ùƒ Ø§Ù„Ø¨ÙˆØª ÙŠÙ‚Ø¯Ø± ÙŠØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "❌ Ø¨Ø³ Ù…Ø§Ù„Ùƒ Ø§Ù„Ø¨ÙˆØª ÙŠÙ‚Ø¯Ø± ÙŠØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -56,7 +56,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "ðŸ“‹ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø± ÙØ§Ø¶ÙŠØ©."
+                                "📋 Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø± ÙØ§Ø¶ÙŠØ©."
                             )
                         ]
                     });
@@ -73,7 +73,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setTitle("ðŸš« Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†")
+                            .setTitle("🚫 Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†")
                             .setDescription(list)
                             .setFooter({
                                 text: `Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹: ${users.length} Ù…Ø³ØªØ®Ø¯Ù…`
@@ -101,7 +101,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "âŒ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\nÙ…Ø«Ø§Ù„: `>blacklist remove @user`"
+                                "❌ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\nÙ…Ø«Ø§Ù„: `>blacklist remove @user`"
                             )
                         ]
                     });
@@ -116,7 +116,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "âŒ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ùˆ Ù…Ø­Ø¸ÙˆØ± Ø£ØµÙ„Ø§Ù‹."
+                                "❌ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ùˆ Ù…Ø­Ø¸ÙˆØ± Ø£ØµÙ„Ø§Ù‹."
                             )
                         ]
                     });
@@ -125,7 +125,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            `âœ… ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø­Ø¸Ø± Ø¹Ù† <@${userId}>.`
+                            `✅ ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø­Ø¸Ø± Ø¹Ù† <@${userId}>.`
                         )
                     ]
                 });
@@ -146,7 +146,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\n" +
+                            "❌ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\n" +
                             "`>blacklist @user`\n" +
                             "`>blacklist remove @user`\n" +
                             "`>blacklist list`"
@@ -159,7 +159,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ù…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø­Ø¸Ø± Ù†ÙØ³ÙŠ."
+                            "❌ Ù…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø­Ø¸Ø± Ù†ÙØ³ÙŠ."
                         )
                     ]
                 });
@@ -174,7 +174,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ø­Ø¸ÙˆØ± Ù…Ø³Ø¨Ù‚Ù‹Ø§."
+                            "❌ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ø­Ø¸ÙˆØ± Ù…Ø³Ø¨Ù‚Ù‹Ø§."
                         )
                     ]
                 });
@@ -188,21 +188,21 @@ module.exports = {
             return message.channel.send({
                 embeds: [
                     createEmbed(
-                        `ðŸš« ØªÙ… **Ø­Ø¸Ø±** <@${userId}> Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas.`
+                        `🚫 ØªÙ… **Ø­Ø¸Ø±** <@${userId}> Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas.`
                     )
                 ]
             });
 
         } catch (error) {
             console.error(
-                "âŒ Blacklist command error:",
+                "❌ Blacklist command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¯ÙŠØ± Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø±."
+                        "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¯ÙŠØ± Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø±."
                     )
                 ]
             }).catch(() => {});

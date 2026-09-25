@@ -22,7 +22,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -35,7 +35,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -65,7 +65,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…: `>clear queue`"
+                            "❌ Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…: `>clear queue`"
                         )
                     ]
                 });
@@ -81,7 +81,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© ÙØ§Ø¶ÙŠØ© Ø£ØµÙ„Ø§Ù‹."
+                            "❌ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© ÙØ§Ø¶ÙŠØ© Ø£ØµÙ„Ø§Ù‹."
                         )
                     ]
                 });
@@ -91,7 +91,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "âŒ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© ÙØ§Ø¶ÙŠØ© Ø£ØµÙ„Ø§Ù‹."
+                            "❌ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© ÙØ§Ø¶ÙŠØ© Ø£ØµÙ„Ø§Ù‹."
                         )
                     ]
                 });
@@ -114,21 +114,21 @@ module.exports = {
             await message.channel.send({
                 embeds: [
                     createEmbed(
-                        `ðŸ—‘ï¸ ØªÙ… Ø­Ø°Ù **${count} Ø£ØºÙ†ÙŠØ©** Ù…Ù† Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.`
+                        `🗑️ ØªÙ… Ø­Ø°Ù **${count} Ø£ØºÙ†ÙŠØ©** Ù…Ù† Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.`
                     )
                 ]
             });
 
         } catch (error) {
             console.error(
-                "âŒ Clear queue command error:",
+                "❌ Clear queue command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ÙØ±Ù‘Øº Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©."
+                        "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ÙØ±Ù‘Øº Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©."
                     )
                 ]
             }).catch(() => {});

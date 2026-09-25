@@ -37,7 +37,7 @@ function createMusicPanel(track) {
         .setDescription(
             `**${author}**\n\n` +
             `Ø·Ù„Ø¨Ù‡Ø§: ${track.requester || "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"}\n` +
-            `Ø§Ù„Ù…Ø¯Ø©: **${duration}** â€¢ Ø§Ù„ØµÙˆØª: **75%**`
+            `Ø§Ù„Ù…Ø¯Ø©: **${duration}** —¢ Ø§Ù„ØµÙˆØª: **75%**`
         )
         .setFooter({
             text: "anas Music"
@@ -50,22 +50,22 @@ function createMusicPanel(track) {
     const buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
             .setCustomId("music_previous")
-            .setEmoji("â®ï¸")
+            .setEmoji("⏮️")
             .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("music_pause")
-            .setEmoji("â¸ï¸")
+            .setEmoji("⏸️")
             .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("music_skip")
-            .setEmoji("â­ï¸")
+            .setEmoji("⏭️")
             .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("music_stop")
-            .setEmoji("â¹ï¸")
+            .setEmoji("⏹️")
             .setStyle(ButtonStyle.Secondary)
     );
 
