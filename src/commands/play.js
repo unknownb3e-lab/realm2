@@ -63,13 +63,8 @@ module.exports = {
                     player.voiceChannelId &&
                     player.voiceChannelId !== voiceChannel.id
                 ) {
-                    return message.reply({
-                        embeds: [
-                            createErrorEmbed(
-                                `أنا أشغل الموسيقى حاليًا في <#${player.voiceChannelId}>.`
-                            )
-                        ]
-                    });
+                    await player.setVoiceChannelId(voiceChannel.id);
+                    await player.stopPlaying();
                 }
 
                 player.voiceChannelId = voiceChannel.id;

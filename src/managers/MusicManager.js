@@ -295,11 +295,6 @@ function createMusicManager(client) {
                 new ActionRowBuilder().addComponents(
 
                     new ButtonBuilder()
-                        .setCustomId("music_favorite")
-                        .setEmoji("❤️")
-                        .setStyle(ButtonStyle.Secondary),
-
-                    new ButtonBuilder()
                         .setCustomId("music_playpause")
                         .setEmoji("⏯️")
                         .setStyle(ButtonStyle.Secondary),
@@ -320,17 +315,9 @@ function createMusicManager(client) {
                         .setStyle(ButtonStyle.Secondary)
                 );
 
-            const moreButton = new ActionRowBuilder().addComponents(
-                new ButtonBuilder()
-                    .setCustomId("music_more")
-                    .setLabel("المزيد")
-                    .setEmoji("📋")
-                    .setStyle(ButtonStyle.Primary)
-            );
-
             await channel.send({
                 embeds: [embed],
-                components: [buttons, moreButton]
+                components: [buttons]
             });
 
         } catch (error) {
