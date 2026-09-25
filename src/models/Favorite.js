@@ -13,7 +13,7 @@ const favoriteSchema = new mongoose.Schema({
     },
     trackEncoded: {
         type: String,
-        required: true
+        default: ""
     },
     trackIdentifier: {
         type: String,

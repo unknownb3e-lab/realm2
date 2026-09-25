@@ -56,7 +56,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "📋 قائمة الحظر فارضة."
+                                "📋 قائمة الحظر فارغة."
                             )
                         ]
                     });
