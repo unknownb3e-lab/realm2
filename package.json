@@ -1,0 +1,20 @@
+{
+  "name": "yowa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2",
+    "genius-lyrics-api": "^3.2.1",
+    "lavalink-client": "^2.10.3",
+    "mongoose": "^9.9.3"
+  }
+}
