@@ -52,7 +52,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ ماكو مشغل موسيقى شغال حالياً."
                             )
                     ]
                 });
@@ -66,7 +66,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ ماكو أغنية تشتغل حالياً."
                             )
                     ]
                 });
@@ -75,10 +75,10 @@ module.exports = {
             const info = track.info || {};
 
             const title =
-                info.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                info.title || "عنوان غير معروف";
 
             const author =
-                info.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                info.author || "فنان غير معروف";
 
             const durationMs =
                 info.duration || 0;
@@ -97,13 +97,13 @@ module.exports = {
 
             const status =
                 player.paused
-                    ? "⏸️ Ù…ØªÙˆÙ‚ÙØ© Ù…Ø¤Ù‚ØªÙ‹Ø§"
-                    : "▶️ ØªØ´ØªØºÙ„";
+                    ? "⏸️ متوقفة مؤقتاً"
+                    : "▶️ تشتغل";
 
             const requester =
                 track.requester
                     ? track.requester.toString()
-                    : "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                    : "غير معروف";
 
             const progressBar =
                 createProgressBar(
@@ -124,11 +124,11 @@ module.exports = {
                     `${status}\n\n` +
                     `${progressBar}\n` +
                     `\`${position} / ${duration}\`\n\n` +
-                    `🔊 Ø§Ù„ØµÙˆØª: **${volume}%**\n` +
-                    `👤 Ø·Ù„Ø¨Ù‡Ø§: ${requester}`
+                    `🔊 الصوت: **${volume}%**\n` +
+                    `👤 طلبها: ${requester}`
                 )
                 .setFooter({
-                    text: "anas Music —¢ ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù†"
+                    text: "anas Music • تشتغل الآن"
                 });
 
             if (artwork) {
@@ -178,11 +178,10 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
+                            "❌ صار في خطأ وحنا نجيب الأغنية الحالية."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
-

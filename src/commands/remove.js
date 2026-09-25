@@ -22,7 +22,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "❌ ماكو مشغل موسيقى شغال حالياً."
                         )
                     ]
                 });
@@ -35,7 +35,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "❌ لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                         )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
                         )
                     ]
                 });
@@ -65,7 +65,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…: `>remove queue <Ø±Ù‚Ù…>`\n\nÙ…Ø«Ø§Ù„: `>remove queue 2`"
+                            "❌ الاستخدام: `>remove queue <رقم>`\n\nمثال: `>remove queue 2`"
                         )
                     ]
                 });
@@ -77,7 +77,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ø§Ù„Ø±Ø¬Ø§Ø¡ ÙƒØªØ§Ø¨Ø© Ø±Ù‚Ù… ØµØ­ÙŠØ­ Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©."
+                            "❌ الرجاء كتابة رقم صحيح بالقائمة."
                         )
                     ]
                 });
@@ -93,7 +93,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© ÙØ§Ø¶ÙŠØ©."
+                            "❌ القائمة فاضية."
                         )
                     ]
                 });
@@ -103,7 +103,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            `❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© Ø¨Ø§Ù„Ø±Ù‚Ù… **${position}** Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.`
+                            `❌ ماكو أغنية بالرقم **${position}** بالقائمة.`
                         )
                     ]
                 });
@@ -116,7 +116,7 @@ module.exports = {
             const track = queue.tracks[position - 1];
 
             const title =
-                track?.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                track?.info?.title || "عنوان غير معروف";
 
             // ==========================================
             // REMOVE TRACK
@@ -131,7 +131,7 @@ module.exports = {
             await message.channel.send({
                 embeds: [
                     createEmbed(
-                        `🗑️ ØªÙ… Ø­Ø°Ù **${title}** Ù…Ù† Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.`
+                        `🗑️ تم حذف **${title}** من القائمة.`
                     )
                 ]
             });
@@ -145,7 +145,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø­Ø°Ù Ù‡Ø§ÙŠ Ø§Ù„Ø£ØºÙ†ÙŠØ©."
+                        "❌ صار في خطأ وحنا نحذف هاي الأغنية."
                     )
                 ]
             }).catch(() => {});

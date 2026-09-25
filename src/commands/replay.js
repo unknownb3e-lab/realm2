@@ -22,7 +22,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "❌ ماكو مشغل موسيقى شغال حالياً."
                         )
                     ]
                 });
@@ -35,7 +35,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "❌ لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                         )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
                         )
                     ]
                 });
@@ -60,14 +60,14 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "❌ ماكو أغنية تشتغل حاليًا."
                         )
                     ]
                 });
             }
 
             const title =
-                track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                track.info?.title || "عنوان غير معروف";
 
             // Restart current song
             await player.seek(0);
@@ -75,7 +75,7 @@ module.exports = {
             await message.channel.send({
                 embeds: [
                     createEmbed(
-                        `🔄 Ø¹Ù… Ø£Ø¹ÙŠØ¯ **${title}** Ù…Ù† Ø§Ù„Ø¨Ø¯Ø§ÙŠØ©.`
+                        `🔄 عم أعيد **${title}** من البداية.`
                     )
                 ]
             });
@@ -89,7 +89,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¹ÙŠØ¯ Ø§Ù„Ø£ØºÙ†ÙŠØ©."
+                        "❌ صار في خطأ وحنا نعيد الأغنية."
                     )
                 ]
             }).catch(() => {});

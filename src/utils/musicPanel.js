@@ -22,8 +22,8 @@ function formatDuration(ms) {
 }
 
 function createMusicPanel(track) {
-    const title = track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
-    const author = track.info?.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+    const title = track.info?.title || "عنوان غير معروف";
+    const author = track.info?.author || "فنان غير معروف";
     const duration = formatDuration(track.info?.duration);
 
     const artwork =
@@ -36,8 +36,8 @@ function createMusicPanel(track) {
         .setTitle(title)
         .setDescription(
             `**${author}**\n\n` +
-            `Ø·Ù„Ø¨Ù‡Ø§: ${track.requester || "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"}\n` +
-            `Ø§Ù„Ù…Ø¯Ø©: **${duration}** —¢ Ø§Ù„ØµÙˆØª: **75%**`
+            `طلبها: ${track.requester || "غير معروف"}\n` +
+            `المدة: **${duration}** —¢ اللصوت: **75%**`
         )
         .setFooter({
             text: "anas Music"

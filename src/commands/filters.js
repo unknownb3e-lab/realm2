@@ -7,41 +7,41 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor("#2a2a2a")
             .setAuthor({
-                name: "anas Music —¢ ÙÙ„Ø§ØªØ± Ø§Ù„ØµÙˆØª"
+                name: "anas Music • فلاتر الصوت"
             })
-            .setTitle("🎛️ Ø§Ù„ÙÙ„Ø§ØªØ± Ø§Ù„Ù…ØªÙˆÙØ±Ø©")
+            .setTitle("🎛️ الفلاتر المتوفرة")
             .setDescription(
-                "ØºÙŠÙ‘Ø± ØµÙˆØª Ø§Ù„Ù…Ù‚Ø·Ø¹ Ø§Ù„Ø­Ø§Ù„ÙŠ Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£Ø­Ø¯ Ø§Ù„ÙÙ„Ø§ØªØ± Ø¨Ø§Ù„Ø£Ø³ÙÙ„."
+                "غير صوت المقطع الحالي باستخدام أحد الفلاتر بكل سهولة."
             )
             .addFields(
                 {
-                    name: "🔊 ØªØ¹Ø²ÙŠØ² Ø§Ù„Ø¨Ø§Øµ",
-                    value: "`>filter bassboost`\nÙŠØ¹Ø²Ø² Ø§Ù„Ø¨Ø§Øµ Ù„ØµÙˆØª Ø£Ø¹Ù…Ù‚.",
+                    name: "🔊 تعزيز الباص",
+                    value: "`>filter bassboost`\nيعزز الباص للصوت أكثر.",
                     inline: false
                 },
                 {
                     name: "🌙 Nightcore",
-                    value: "`>filter nightcore`\nÙŠØ²ÙŠØ¯ Ø§Ù„Ø³Ø±Ø¹Ø© ÙˆØ§Ù„Ù†Ø¨Ø±Ø©.",
+                    value: "`>filter nightcore`\nيزيد السرعة والنبرة.",
                     inline: false
                 },
                 {
-                    name: "🐾 ØªØ¨Ø·ÙŠØ¡",
-                    value: "`>filter slowed`\nÙŠØ¨Ø·Ù‘Ø¦ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©.",
+                    name: "🐾 تبطيء",
+                    value: "`>filter slowed`\nيبطئ الأغنية الحالية.",
                     inline: false
                 },
                 {
-                    name: "⚡ ØªØ³Ø±ÙŠØ¹",
-                    value: "`>filter speedup`\nÙŠØ®Ù„ÙŠ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ© ØªØ´ØªØºÙ„ Ø£Ø³Ø±Ø¹.",
+                    name: "⚡ تسريع",
+                    value: "`>filter speedup`\nيخلي الأغنية الحالية تشتغل أسرع.",
                     inline: false
                 },
                 {
-                    name: "🎛️ Ø·Ø¨ÙŠØ¹ÙŠ",
-                    value: "`>filter normal`\nÙŠØ´ÙŠÙ„ ÙƒÙ„ Ø§Ù„ÙÙ„Ø§ØªØ± Ø§Ù„ÙØ¹Ø§Ù„Ø©.",
+                    name: "🎛️ طبيعي",
+                    value: "`>filter normal`\nيشيل كل الفلاتر الفعالة.",
                     inline: false
                 }
             )
             .setFooter({
-                text: `anas Music —¢ Ø·Ù„Ø¨Ù‡Ø§ ${message.author.username}`
+                text: `anas Music • طلبها ${message.author.username}`
             })
             .setTimestamp();
 
@@ -50,4 +50,3 @@ module.exports = {
         });
     }
 };
-

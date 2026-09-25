@@ -32,7 +32,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ø¨Ø³ Ù…Ø§Ù„Ùƒ Ø§Ù„Ø¨ÙˆØª ÙŠÙ‚Ø¯Ø± ÙŠØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "❌ بس مالك البوت يقدر يستخدم هاذا الأمر."
                         )
                     ]
                 });
@@ -56,7 +56,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "📋 Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø± ÙØ§Ø¶ÙŠØ©."
+                                "📋 قائمة الحظر فارضة."
                             )
                         ]
                     });
@@ -73,10 +73,10 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
-                            .setTitle("🚫 Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†")
+                            .setTitle("🚫 المستخدمين المحظورين")
                             .setDescription(list)
                             .setFooter({
-                                text: `Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹: ${users.length} Ù…Ø³ØªØ®Ø¯Ù…`
+                                text: `المجموع: ${users.length} مستخدم`
                             })
                     ]
                 });
@@ -101,7 +101,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "❌ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\nÙ…Ø«Ø§Ù„: `>blacklist remove @user`"
+                                "❌ الرجاء منشن المستخدم.\n\nمثال: `>blacklist remove @user`"
                             )
                         ]
                     });
@@ -116,7 +116,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "❌ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ùˆ Ù…Ø­Ø¸ÙˆØ± Ø£ØµÙ„Ø§Ù‹."
+                                "❌ هاذا المستخدم مو محظور أصلاً."
                             )
                         ]
                     });
@@ -125,7 +125,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            `✅ ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø­Ø¸Ø± Ø¹Ù† <@${userId}>.`
+                            `✅ تم رفع الحظر عن <@${userId}>.`
                         )
                     ]
                 });
@@ -146,7 +146,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\n" +
+                            "❌ الرجاء منشن المستخدم.\n\n" +
                             "`>blacklist @user`\n" +
                             "`>blacklist remove @user`\n" +
                             "`>blacklist list`"
@@ -159,7 +159,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø­Ø¸Ø± Ù†ÙØ³ÙŠ."
+                            "❌ ما أقدر أحظر نفسي."
                         )
                     ]
                 });
@@ -174,7 +174,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ø­Ø¸ÙˆØ± Ù…Ø³Ø¨Ù‚Ù‹Ø§."
+                            "❌ هاذا المستخدم محظور مسبقاً."
                         )
                     ]
                 });
@@ -188,7 +188,7 @@ module.exports = {
             return message.channel.send({
                 embeds: [
                     createEmbed(
-                        `🚫 ØªÙ… **Ø­Ø¸Ø±** <@${userId}> Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas.`
+                        `🚫 تم **حظر** <@${userId}> من استخدام أوامر anas.`
                     )
                 ]
             });
@@ -202,11 +202,10 @@ module.exports = {
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¯ÙŠØ± Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø±."
+                        "❌ صار في خطأ وحنا ندير قائمة الحظر."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
-

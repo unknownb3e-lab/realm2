@@ -24,7 +24,7 @@ if (
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
-                        .setDescription("❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
+                        .setDescription("❌ ماكو مشغل موسيقى شغال حالياً.")
                 ],
                 ephemeral: true
             });
@@ -38,7 +38,7 @@ if (
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ­ÙƒÙ…."
+                            "❌ لازم تكون بروم صوتي حتى‰ تستخدم أزرار التحكم."
                         )
                 ],
                 ephemeral: true
@@ -54,7 +54,7 @@ if (
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
                         )
                 ],
                 ephemeral: true
@@ -204,6 +204,395 @@ if (
 
                     break;
                 }
+
+                // =========================
+                // JOIN - PLAY SONG
+                // =========================
+
+                case "join_play": {
+                    const modal = new ModalBuilder()
+                        .setCustomId(`join_modal_${interaction.member.id}`)
+                        .setTitle("تشغيل أغنية");
+
+                    const songInput = new TextInputBuilder()
+                        .setCustomId("song_input")
+                        .setLabel("اسم الأغنية أو الرابط")
+                        .setPlaceholder("مثال: Ahmed Bukhatir - Ya Twaijar")
+                        .setStyle(TextInputStyle.Short)
+                        .setRequired(true);
+
+                    const firstActionRow = new ActionRowBuilder().addComponents(songInput);
+                    modal.addComponents(firstActionRow);
+
+                    await interaction.showModal(modal);
+
+                    break;
+                }
+
+                // =========================
+                // JOIN - FAVORITES
+                // =========================
+
+                case "join_favorites": {
+                    const userId = interaction.member.id;
+
+                    const favorites = await Favorite.find({
+                        userId: userId,
+                        guildId: interaction.guildId
+                    }).sort({ addedAt: -1 });
+
+                    if (!favorites.length) {
+                        return interaction.reply({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setColor("#2a2a2a")
+                                    .setDescription(
+                                        "📋 ما عندك أي أغاني في القائمة المفضلة.\n\nأضف أغنية من خلال زر ❤️ أثناء تشغيل الأغنية."
+                                    )
+                            ],
+                            ephemeral: true
+                        });
+                    }
+
+                    const tracks = favorites.map((fav, index) => ({
+                        label: `${index + 1}. ${fav.title}`,
+                        description: `${fav.author} • ${formatDuration(fav.duration)}`,
+                        value: `fav_${fav.trackIdentifier}`,
+                        emoji: "❤️"
+                    }));
+
+                    const selectMenu = new StringSelectMenuBuilder()
+                        .setCustomId(`favorites_select_${userId}`)
+                        .setPlaceholder("اختر أغنية من المفضلة")
+                        .addOptions(tracks.slice(0, 25));
+
+                    const row = new ActionRowBuilder().addComponents(selectMenu);
+
+                    await interaction.reply({
+                        embeds: [
+                            new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("❤️ القائمة المفضلة")
+                                .setDescription(
+                                    `عندك **${favorites.length}** أغنية في المفضلة\n\nاختر أغنية للتشغيل:`
+                                )
+                                .setFooter({
+                                    text: "anas Music"
+                                })
+                        ],
+                        components: [row],
+                        ephemeral: true
+                    });
+
+                    break;
+                }
+
+                // =========================
+                // JOIN - MORE OPTIONS
+                // =========================
+
+                case "join_more":
+                case "music_more": {
+                    const selectMenu = new StringSelectMenuBuilder()
+                        .setCustomId(`more_options_${interaction.member.id}`)
+                        .setPlaceholder("اختر خيار")
+                        .addOptions(
+                            {
+                                label: "شرح الأوامر",
+                                description: "عرض جميع الأوامر مع الشرح",
+                                value: "help_commands",
+                                emoji: "📖",
+                            },
+                            {
+                                label: "الإدارة",
+                                description: "خيارات الإدارة",
+                                value: "admin",
+                                emoji: "⚙️",
+                            },
+                            {
+                                label: "المعلومات",
+                                description: "معلومات البوت",
+                                value: "info",
+                                emoji: "ℹ️",
+                            },
+                            {
+                                label: "تشغيل أغنية",
+                                description: "تشغيل أغنية جديدة",
+                                value: "play_song",
+                                emoji: "🎵",
+                            },
+                            {
+                                label: "القائمة المفضلة",
+                                description: "عرض القائمة المفضلة",
+                                value: "favorites",
+                                emoji: "❤️",
+                            }
+                        );
+
+                    const row = new ActionRowBuilder().addComponents(selectMenu);
+
+                    await interaction.reply({
+                        embeds: [
+                            new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("📋 خيارات إضافية")
+                                .setDescription("اختر من القائمة بالأسفل:")
+                                .setFooter({
+                                    text: "anas Music"
+                                })
+                        ],
+                        components: [row],
+                        ephemeral: true
+                    });
+
+                    break;
+                }
+
+                // =========================
+                // FAVORITE TOGGLE
+                // =========================
+
+                case "music_favorite": {
+                    const currentTrack = player.queue.current;
+
+                    if (!currentTrack) {
+                        return interaction.reply({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setColor("#2a2a2a")
+                                    .setDescription("❌ ماكو أغنية شغالة حالياً.")
+                            ],
+                            ephemeral: true
+                        });
+                    }
+
+                    const existing = await Favorite.findOne({
+                        userId: interaction.member.id,
+                        guildId: interaction.guildId,
+                        trackIdentifier: currentTrack.info?.identifier
+                    });
+
+                    if (existing) {
+                        await Favorite.deleteOne({
+                            _id: existing._id
+                        });
+
+                        await interaction.reply({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setColor("#2a2a2a")
+                                    .setDescription("💔 تم إزالة الأغنية من المفضلة.")
+                            ],
+                            ephemeral: true
+                        });
+                    } else {
+                        await Favorite.create({
+                            userId: interaction.member.id,
+                            guildId: interaction.guildId,
+                            trackEncoded: currentTrack.info?.encoded,
+                            trackIdentifier: currentTrack.info?.identifier,
+                            title: currentTrack.info?.title || "عنوان غير معروف",
+                            author: currentTrack.info?.author || "فنان غير معروف",
+                            duration: currentTrack.info?.duration || 0,
+                            artworkUrl: currentTrack.info?.artworkUrl || currentTrack.info?.thumbnail || null
+                        });
+
+                        await interaction.reply({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setColor("#2a2a2a")
+                                    .setDescription("❤️ تم إضافة الأغنية للمفضلة.")
+                            ],
+                            ephemeral: true
+                        });
+                    }
+
+                    break;
+                }
+
+                // =========================
+                // JOIN - MORE OPTIONS / MUSIC MORE
+                // =========================
+
+                case "join_more":
+                case "music_more": {
+                    const selectMenu = new StringSelectMenuBuilder()
+                        .setCustomId(`more_options_${interaction.member.id}`)
+                        .setPlaceholder("اختر خيار")
+                        .addOptions(
+                            {
+                                label: "شرح الأوامر",
+                                description: "عرض جميع الأوامر مع الشرح",
+                                value: "help_commands",
+                                emoji: "📖",
+                            },
+                            {
+                                label: "الإدارة",
+                                description: "خيارات الإدارة",
+                                value: "admin",
+                                emoji: "⚙️",
+                            },
+                            {
+                                label: "المعلومات",
+                                description: "معلومات البوت",
+                                value: "info",
+                                emoji: "ℹ️",
+                            },
+                            {
+                                label: "تشغيل أغنية",
+                                description: "تشغيل أغنية جديدة",
+                                value: "play_song",
+                                emoji: "🎵",
+                            },
+                            {
+                                label: "القائمة المفضلة",
+                                description: "عرض القائمة المفضلة",
+                                value: "favorites",
+                                emoji: "❤️",
+                            }
+                        );
+
+                    const row = new ActionRowBuilder().addComponents(selectMenu);
+
+                    await interaction.reply({
+                        embeds: [
+                            new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("📋 خيارات إضافية")
+                                .setDescription("اختر من القائمة بالأسفل:")
+                                .setFooter({
+                                    text: "anas Music"
+                                })
+                        ],
+                        components: [row],
+                        ephemeral: true
+                    });
+
+                    break;
+                }
+
+                // =========================
+                // MORE OPTIONS SELECT
+                // =========================
+
+                case "help_commands":
+                case "admin":
+                case "info":
+                case "play_song":
+                case "favorites": {
+                    let responseEmbed;
+
+                    switch (interaction.values[0]) {
+                        case "help_commands":
+                            responseEmbed = new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("📖 شرح الأوامر")
+                                .setDescription(
+                                    "**🎵 أوامر الموسيقى**\n" +
+                                    "`play` - تشغيل أغنية\n" +
+                                    "`pause` - إيقاف مؤقت\n" +
+                                    "`resume` - استئناف\n" +
+                                    "`skip` - تخطي\n" +
+                                    "`stop` - إيقاف نهائي\n" +
+                                    "`volume` - تغيير الصوت\n" +
+                                    "`queue` - عرض القائمة\n" +
+                                    "`loop` - تكرار\n" +
+                                    "`247` - وضع 24/7\n\n" +
+                                    "**ℹ️ معلومات**\n" +
+                                    "`help` - قائمة المساعدة\n" +
+                                    "`ping` - سرعة الاستجابة\n" +
+                                    "`stats` - إحصائيات البوت"
+                                );
+                            break;
+
+                        case "admin":
+                            responseEmbed = new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("⚙️ الإدارة")
+                                .setDescription(
+                                    "**🛡️ أوامر الإدارة**\n" +
+                                    "`blacklist add @user` - حظر مستخدم\n" +
+                                    "`blacklist remove @user` - رفع الحظر\n" +
+                                    "`blacklist list` - عرض المحظورين\n\n" +
+                                    "فقط مالك البوت يستطيع استخدام هذه الأوامر."
+                                );
+                            break;
+
+                        case "info":
+                            responseEmbed = new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("ℹ️ معلومات البوت")
+                                .setDescription(
+                                    "**بوت اغاني احترافي**\n\n" +
+                                    "**المطور:** anas\n" +
+                                    `**السيرفرات:** \`${client.guilds.cache.size}\`\n` +
+                                    `**المستخدمين:** \`${client.guilds.cache.reduce((total, guild) => total + (guild.memberCount || 0), 0).toLocaleString()}\``
+                                )
+                                .setFooter({
+                                    text: "anas Music"
+                                })
+                                .setTimestamp();
+                            break;
+
+                        case "play_song":
+                            const modal = new ModalBuilder()
+                                .setCustomId(`join_modal_${interaction.member.id}`)
+                                .setTitle("تشغيل أغنية");
+
+                            const songInput = new TextInputBuilder()
+                                .setCustomId("song_input")
+                                .setLabel("اسم الأغنية أو الرابط")
+                                .setPlaceholder("مثال: Ahmed Bukhatir - Ya Twaijar")
+                                .setStyle(TextInputStyle.Short)
+                                .setRequired(true);
+
+                            const firstActionRow = new ActionRowBuilder().addComponents(songInput);
+                            modal.addComponents(firstActionRow);
+
+                            await interaction.showModal(modal);
+                            return;
+
+                        case "favorites":
+                            const favorites = await Favorite.find({
+                                userId: interaction.member.id,
+                                guildId: interaction.guildId
+                            }).sort({ addedAt: -1 });
+
+                            if (!favorites.length) {
+                                responseEmbed = new EmbedBuilder()
+                                    .setColor("#2a2a2a")
+                                    .setDescription(
+                                        "📋 ما عندك أي أغاني في القائمة المفضلة.\n\nأضف أغنية من خلال زر ❤️ أثناء تشغيل الأغنية."
+                                    );
+                            } else {
+                                const favList = favorites.map((fav, index) =>
+                                    `**${index + 1}.** ${fav.title}\n` +
+                                    `┕ ${fav.author} • ${formatDuration(fav.duration)}\n`
+                                ).join("\n");
+
+                                responseEmbed = new EmbedBuilder()
+                                    .setColor("#2a2a2a")
+                                    .setTitle("❤️ القائمة المفضلة")
+                                    .setDescription(
+                                        `عندك **${favorites.length}** أغنية في المفضلة\n\n${favList}`
+                                    )
+                                    .setFooter({
+                                        text: "anas Music"
+                                    });
+                            }
+                            break;
+
+                        default:
+                            return;
+                    }
+
+                    await interaction.reply({
+                        embeds: [responseEmbed],
+                        ephemeral: true
+                    });
+
+                    break;
+                }
             }
 
         } catch (error) {
@@ -215,7 +604,7 @@ if (
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø²Ø±."
+                                "❌ صار في خطأ وحنا نستخدم هاذا الزر."
                             )
                     ],
                     ephemeral: true

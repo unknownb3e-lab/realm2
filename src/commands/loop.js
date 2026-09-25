@@ -19,7 +19,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "ماكو مشغل موسيقى شغال حالياً."
                         )
                     ]
                 });
@@ -31,7 +31,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                         )
                     ]
                 });
@@ -44,7 +44,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "لازم تكون بنفس الروم الصوتي مع البوت."
                         )
                     ]
                 });
@@ -62,18 +62,18 @@ module.exports = {
 
                 const displayMode =
                     currentMode === "track"
-                        ? "Ø§Ù„Ø£ØºÙ†ÙŠØ©"
+                        ? "الأغنية"
                         : currentMode === "queue"
-                        ? "Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©"
-                        : "Ù…ØªÙˆÙ‚Ù";
+                        ? "القائمة"
+                        : "متوقف";
 
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                `🔁 ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ: **${displayMode}**\n\n` +
-                                `Ø§Ø³ØªØ®Ø¯Ù… \`>loop off\`✅ \`>loop song\` Ø£Ùˆ \`>loop queue\`.`
+                                `🔁 وضع التكرار الحالي: **${displayMode}**\n\n` +
+                                `استخدم \`>loop off\`، \`>loop song\` أو \`>loop queue\`.`
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -101,7 +101,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ÙˆØ¶Ø¹ ØªÙƒØ±Ø§Ø± ØºÙŠØ± ØµØ­ÙŠØ­.\n\nØ§Ø³ØªØ®Ø¯Ù… `>loop off`✅ `>loop song` Ø£Ùˆ `>loop queue`."
+                            "وضع تكرار غير صحيح.\n\nاستخدم `>loop off`، `>loop song` أو `>loop queue`."
                         )
                     ]
                 });
@@ -120,11 +120,11 @@ module.exports = {
             let description;
 
             if (repeatMode === "off") {
-                description = "🔁 ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ØªÙƒØ±Ø§Ø±.";
+                description = "🔁 تم إيقاف التكرار.";
             } else if (repeatMode === "track") {
-                description = "🔂 Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ© Ø±Ø­ ØªØªÙƒØ±Ø±.";
+                description = "🔂 الأغنية الحالية رح تتكرر.";
             } else {
-                description = "🔁 Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø±Ø­ ØªØªÙƒØ±Ø±.";
+                description = "🔁 القائمة رح تتكرر.";
             }
 
             const embed = new EmbedBuilder()
@@ -147,11 +147,10 @@ module.exports = {
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ØºÙŠØ± ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø±."
+                        "صار في خطأ وحنا نغير وضع التكرار."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
-

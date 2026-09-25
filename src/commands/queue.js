@@ -39,7 +39,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "ماكو مشغل موسيقى شغال حالياً."
                         )
                     ]
                 });
@@ -61,7 +61,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù†ØªØ¸Ø§Ø± Ø§Ù„Ø£ØºØ§Ù†ÙŠ ÙØ§Ø¶ÙŠØ©."
+                            "قائمة انتظار الأغاني فاضية."
                         )
                     ]
                 });
@@ -76,25 +76,25 @@ module.exports = {
             if (currentTrack) {
                 const title =
                     currentTrack.info?.title ||
-                    "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                    "عنوان غير معروف";
 
                 const duration = formatDuration(
                     currentTrack.info?.duration
                 );
 
                 description +=
-                    `**ÙŠØªÙ… Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¢Ù†**\n` +
+                    `**يتم التشغيل الآن**\n` +
                     `🎵 **${title}**\n` +
                     `\`[${duration}]\`\n\n`;
             }
 
             if (tracks.length > 0) {
-                description += "**Ø§Ù„ØªØ§Ù„ÙŠ Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©**\n";
+                description += "**التالي بالقائمة**\n";
 
                 tracks.forEach((track, index) => {
                     const title =
                         track.info?.title ||
-                        "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                        "عنوان غير معروف";
 
                     const duration = formatDuration(
                         track.info?.duration
@@ -106,8 +106,8 @@ module.exports = {
                 });
             } else {
                 description +=
-                    "**Ø§Ù„ØªØ§Ù„ÙŠ Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©**\n" +
-                    "Ù…Ø§ÙƒÙˆ Ø£ØºØ§Ù†ÙŠ Ø¨Ø§Ù„Ø§Ù†ØªØ¸Ø§Ø± Ø­Ø§Ù„ÙŠÙ‹Ø§.";
+                    "**التالي بالقائمة**\n" +
+                    "ماكو أغاني بالانتظار حاليًا.";
             }
 
             // ==========================================
@@ -117,7 +117,7 @@ module.exports = {
             if (description.length > 4000) {
                 description =
                     description.substring(0, 3950) +
-                    "\n...ÙˆØ£ÙƒØ«Ø±.";
+                    "\n...وأكثر.";
             }
 
             // ==========================================
@@ -126,10 +126,10 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#2a2a2a")
-                .setTitle("🎵 Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ")
+                .setTitle("🎵 قائمة الأغاني")
                 .setDescription(description)
                 .setFooter({
-                    text: `anas Music —¢ ${tracks.length} Ø£ØºÙ†ÙŠØ© Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©`
+                    text: `anas Music • ${tracks.length} أغنية بالقائمة`
                 });
 
             await message.channel.send({
@@ -145,11 +145,10 @@ module.exports = {
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ."
+                        "صار في خطأ وحنا نجيب قائمة الأغاني."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
-

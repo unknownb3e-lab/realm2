@@ -23,7 +23,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "ماكو مشغل موسيقى شغال حالياً."
                         )
                     ]
                 });
@@ -39,7 +39,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                         )
                     ]
                 });
@@ -52,7 +52,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "لازم تكون بنفس الروم الصوتي مع البوت."
                         )
                     ]
                 });
@@ -70,7 +70,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                `🔊 Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø§Ù„Ø­Ø§Ù„ÙŠ: **${currentVolume}%**`
+                                `🔊 مستوى الصوت الحالي: **${currentVolume}%**`
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -89,7 +89,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ø§Ù„Ø±Ø¬Ø§Ø¡ ÙƒØªØ§Ø¨Ø© Ø±Ù‚Ù… ØµØ­ÙŠØ­ Ù„Ù„ØµÙˆØª."
+                            "الرجاء كتابة رقم صحيح للصوت."
                         )
                     ]
                 });
@@ -103,7 +103,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ù„Ø§Ø²Ù… ÙŠÙƒÙˆÙ† Ø¨ÙŠÙ† **0** Ùˆ **150**."
+                            "مستوى الصوت لازم يكون بين **0** و **150**."
                         )
                     ]
                 });
@@ -122,7 +122,7 @@ module.exports = {
             const embed = new EmbedBuilder()
                 .setColor("#2a2a2a")
                 .setDescription(
-                    `🔊 ØªÙ… Ø¶Ø¨Ø· Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø¹Ù„Ù‰ **${volume}%**.`
+                    `🔊 تم ضبط مستوى الصوت على **${volume}%**.`
                 )
                 .setFooter({
                     text: "anas Music"
@@ -141,11 +141,10 @@ module.exports = {
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ØºÙŠØ± Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª."
+                        "صار في خطأ وحنا نغير مستوى الصوت."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
-

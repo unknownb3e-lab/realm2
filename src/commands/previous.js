@@ -26,7 +26,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                            "لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                         )
                     ]
                 });
@@ -44,7 +44,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                            "ماكو مشغل موسيقى شغال حالياً."
                         )
                     ]
                 });
@@ -61,7 +61,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                            "لازم تكون بنفس الروم الصوتي مع البوت."
                         )
                     ]
                 });
@@ -79,7 +79,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© Ø³Ø§Ø¨Ù‚Ø©."
+                            "ماكو أغنية سابقة."
                         )
                     ]
                 });
@@ -122,14 +122,14 @@ module.exports = {
 
             const title =
                 previousTrack.info?.title ||
-                "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                "عنوان غير معروف";
 
             await message.channel.send({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            `⏮️ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${title}**`
+                            `⏮️ عم تشتغل الأغنية السابقة: **${title}**`
                         )
                         .setFooter({
                             text: "anas Music"
@@ -146,11 +146,10 @@ module.exports = {
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø´ØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©."
+                        "صار في خطأ وحنا نشغل الأغنية السابقة."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
-

@@ -15,7 +15,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ø£Ù†Ø§ Ù…Ùˆ Ù…ØªØµÙ„ Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ."
+                                "❌ أنا مو متصل بروم صوتي."
                             )
                     ]
                 });
@@ -29,7 +29,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                                "❌ لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                             )
                     ]
                 });
@@ -44,7 +44,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                                "❌ لازم تكون بنفس الروم الصوتي مع البوت."
                             )
                     ]
                 });
@@ -63,7 +63,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "🔒 **ÙˆØ¶Ø¹ 24/7 Ù…ÙØ¹Ù‘Ù„.**\n\nÙ…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø·Ù„Ø¹ Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ ÙˆÙ‡Ùˆ Ø´ØºØ§Ù„."
+                                "🔒 **وضع 24/7 مفعل.**\n\nما اقدر اغادر الروم الصوتي وهو شغال."
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -109,9 +109,9 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#2a2a2a")
-                .setTitle("👋 ØªÙ… Ù‚Ø·Ø¹ Ø§Ù„Ø§ØªØµØ§Ù„")
+                .setTitle("👋 تم قطع الاتصال")
                 .setDescription(
-                    "Ø·Ù„Ø¹Øª Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ ÙˆÙØ±Ù‘ØºØª Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ."
+                    "طلعت من الروم الصوتي وفرغت قائمة الأغاني."
                 )
                 .setFooter({
                     text: "anas Music"
@@ -132,11 +132,10 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø·Ù„Ø¹ Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ."
+                            "❌ صار في خطأ وحنا نطلع من الروم الصوتي."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
-

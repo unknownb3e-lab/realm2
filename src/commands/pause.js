@@ -12,7 +12,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
-                            .setDescription("❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
+                            .setDescription("❌ ماكو مشغل موسيقى شغال حالياً.")
                     ]
                 });
             }
@@ -25,7 +25,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                                "❌ لازم تكون بروم صوتي حتى تستخدم هاذا الأمر."
                             )
                     ]
                 });
@@ -40,7 +40,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
+                                "❌ لازم تكون بنفس الروم الصوتي مع البوت."
                             )
                     ]
                 });
@@ -51,7 +51,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
-                            .setDescription("⏸️ Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ù…ØªÙˆÙ‚ÙØ© Ù…Ø¤Ù‚ØªÙ‹Ø§ Ø£ØµÙ„Ø§Ù‹.")
+                            .setDescription("⏸️ الموسيقى متوقفة مؤقتاً أصلاً.")
                     ]
                 });
             }
@@ -60,7 +60,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#2a2a2a")
-                .setDescription("⏸️ ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ù…Ø¤Ù‚ØªÙ‹Ø§.")
+                .setDescription("⏸️ تم إيقاف الموسيقى مؤقتاً.")
                 .setFooter({
                     text: "anas Music"
                 });
@@ -77,11 +77,10 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ÙˆÙ‚Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ù…Ø¤Ù‚ØªÙ‹Ø§."
+                            "❌ صار في خطأ وحنا نوقف الموسيقى مؤقتاً."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
-

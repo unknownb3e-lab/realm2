@@ -54,7 +54,7 @@ module.exports = {
 
                 if (blacklisted) {
                     return message.reply(
-                        "🚫 Ø£Ù†Øª Ù…Ø­Ø¸ÙˆØ± Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas."
+                        "🚫 أنت محظور من استخدام أزˆامر anas."
                     ).catch(() => {});
                 }
             } catch (error) {
@@ -87,7 +87,7 @@ module.exports = {
 
             await message.channel
                 .send(
-                    "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ù†ÙØ° Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
+                    "❌ صار في خطأ وحنا ننفذ هذا الأمر."
                 )
                 .catch(() => {});
         }

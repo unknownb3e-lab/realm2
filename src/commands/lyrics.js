@@ -16,7 +16,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ ماكو مشغل موسيقى شغال حالياً."
                             )
                     ]
                 });
@@ -30,7 +30,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
+                                "❌ ماكو أغنية تشتغل حالياً."
                             )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#2a2a2a")
                             .setDescription(
-                                "❌ Ù…Ø§ Ù‚Ø¯Ø±Øª Ø£Ø­Ø¯Ø¯ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
+                                "❌ ما قدرت أحصل على الأغنية الحالية."
                             )
                     ]
                 });
@@ -71,7 +71,7 @@ module.exports = {
                             .setColor("#2a2a2a")
                             .setTitle(title)
                             .setDescription(
-                                `❌ Ù…Ø§ Ù„Ù‚ÙŠØª ÙƒÙ„Ù…Ø§Øª Ù„Ù€ **${title}**.`
+                                `❌ ما لقيت كلمات لـ **${title}**.`
                             )
                             .setFooter({
                                 text: "anas Music"
@@ -91,7 +91,7 @@ module.exports = {
             if (lyricsText.length > maxLength) {
                 lyricsText =
                     lyricsText.substring(0, maxLength) +
-                    "\n\n... ØªÙ… Ø§Ø®ØªØµØ§Ø± Ø§Ù„ÙƒÙ„Ù…Ø§Øª.";
+                    "\n\n... تم اختصار الكلمات.";
             }
 
             const embed = new EmbedBuilder()
@@ -101,7 +101,7 @@ module.exports = {
                     `**${artist}**\n\n${lyricsText}`
                 )
                 .setFooter({
-                    text: "anas Music —¢ Ø§Ù„ÙƒÙ„Ù…Ø§Øª"
+                    text: "anas Music • الكلمات"
                 });
 
             await message.channel.send({
@@ -119,11 +119,10 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#2a2a2a")
                         .setDescription(
-                            "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„ÙƒÙ„Ù…Ø§Øª."
+                            "❌ صار في خطأ وحنا نجيب الكلمات."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
-

@@ -33,10 +33,10 @@ module.exports = {
             if (!channel) return;
 
             const title =
-                track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                track.info?.title || "عنوان غير معروف";
 
             const author =
-                track.info?.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+                track.info?.author || "فنان غير معروف";
 
             const duration =
                 formatDuration(track.info?.duration);
@@ -54,12 +54,12 @@ module.exports = {
                 .setTitle(title)
                 .setDescription(
                     `**${author}**\n\n` +
-                    `Ø·Ù„Ø¨Ù‡Ø§: ${
+                    `طلبها: ${
                         track.requester
                             ? track.requester
-                            : "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"
+                            : "غير معروف"
                     }\n` +
-                    `Ø§Ù„Ù…Ø¯Ø©: **${duration}** —¢ Ø§Ù„ØµÙˆØª: **${volume}%**`
+                    `المدة: **${duration}** —¢ الصوت: **${volume}%**`
                 )
                 .setFooter({
                     text: "anas Music"
@@ -92,7 +92,7 @@ module.exports = {
             );
 
             await channel.send({
-                content: `🎵 ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù† **${title}**`,
+                content: `🎵 تشتغل الآن **${title}**`,
                 embeds: [embed],
                 components: [buttons]
             });
