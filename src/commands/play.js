@@ -47,6 +47,24 @@ module.exports = {
 
             let player = client.lavalink.getPlayer(message.guild.id);
 
+            if (player) {
+                if (
+                    player.voiceChannelId &&
+                    player.voiceChannelId !== voiceChannel.id
+                ) {
+                    try {
+                        await player.disconnect();
+                    } catch (err) {
+                        console.error(
+                            "❌ Play command disconnect error:",
+                            err
+                        );
+                    }
+
+                    player = null;
+                }
+            }
+
             if (!player) {
                 player = client.lavalink.createPlayer({
                     guildId: message.guild.id,
@@ -58,35 +76,6 @@ module.exports = {
 
                     volume: 75
                 });
-            } else {
-                if (
-                    player.voiceChannelId &&
-                    player.voiceChannelId !== voiceChannel.id
-                ) {
-                    await player.stopPlaying();
-
-                    if (player.queue?.tracks) {
-                        while (player.queue.tracks.length > 0) {
-                            player.queue.remove(0);
-                        }
-                    }
-
-                    if (player.connected) {
-                        await player.disconnect();
-                        await new Promise(r => setTimeout(r, 800));
-                    }
-                }
-
-                player.voiceChannelId = voiceChannel.id;
-                player.textChannelId = message.channel.id;
-            }
-
-            // ==========================================
-            // CONNECT
-            // ==========================================
-
-            if (!player.connected) {
-                await player.connect();
             }
 
             // ==========================================
