@@ -1,8 +1,6 @@
-﻿const { EmbedBuilder } = require("discord.js");
-const {
-    addHistory,
-    getPrevious
-} = require("../utils/musicHistory");
+﻿const { EmbedBuilder, StringSelectMenuBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
+const { addHistory, getPrevious } = require("../utils/musicHistory");
+const Favorite = require("../models/Favorite");
 
 module.exports = {
     name: "interactionCreate",

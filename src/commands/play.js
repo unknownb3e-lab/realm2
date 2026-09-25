@@ -90,24 +90,17 @@ module.exports = {
 
             const query = args.join(" ");
 
-            let result = await player.search(
-    {
-        query,
-        source: "ytmsearch"
-    },
-    message.author
-);
+            let result = await player.search({
+                query,
+                source: "ytmsearch"
+            });
 
-// YT Music search failed → normal YouTube search
-if (!result?.tracks?.length) {
-    result = await player.search(
-        {
-            query,
-            source: "ytsearch"
-        },
-        message.author
-    );
-}
+            if (!result?.tracks?.length) {
+                result = await player.search({
+                    query,
+                    source: "ytsearch"
+                });
+            }
 
             if (
                 !result ||

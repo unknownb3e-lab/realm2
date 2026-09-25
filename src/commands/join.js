@@ -50,14 +50,19 @@ module.exports = {
                 .setColor("#2a2a2a")
                 .setTitle("🎵 أناس للموسيقى")
                 .setDescription(
-                    `**مرحباً بك ${user.username}**\n\n` +
+                    `**مرحباً بك ${message.member.user.username}**\n\n` +
                     `✨ اكتب اسم الأغنية أو الرابط في الحقل بالأسفل`
                 )
-                .setImage("https://i.imgur.com/your-banner.gif")
                 .setFooter({
                     text: "anas Music"
                 })
                 .setTimestamp();
+
+            const bannerUrl = client.user?.bannerURL?.({ dynamic: true, size: 1024 });
+
+            if (bannerUrl) {
+                welcomeEmbed.setImage(bannerUrl);
+            }
 
             const row = new ActionRowBuilder().addComponents(
                 new ButtonBuilder()
