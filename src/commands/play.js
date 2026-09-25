@@ -73,6 +73,7 @@ module.exports = {
 
                     if (player.connected) {
                         await player.disconnect();
+                        await new Promise(r => setTimeout(r, 800));
                     }
                 }
 
