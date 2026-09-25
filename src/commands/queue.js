@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 function formatDuration(ms) {
     if (!ms || ms < 0) return "00:00";
@@ -19,7 +19,7 @@ function formatDuration(ms) {
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`❌ ${description}`);
+        .setDescription(`âŒ ${description}`);
 }
 
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ماكو مشغل موسيقى شغال حاليًا."
+                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -61,7 +61,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "قائمة انتظار الأغاني فاضية."
+                            "Ù‚Ø§Ø¦Ù…Ø© Ø§Ù†ØªØ¸Ø§Ø± Ø§Ù„Ø£ØºØ§Ù†ÙŠ ÙØ§Ø¶ÙŠØ©."
                         )
                     ]
                 });
@@ -76,25 +76,25 @@ module.exports = {
             if (currentTrack) {
                 const title =
                     currentTrack.info?.title ||
-                    "عنوان غير معروف";
+                    "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
                 const duration = formatDuration(
                     currentTrack.info?.duration
                 );
 
                 description +=
-                    `**يتم التشغيل الآن**\n` +
-                    `🎵 **${title}**\n` +
+                    `**ÙŠØªÙ… Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„Ø¢Ù†**\n` +
+                    `ðŸŽµ **${title}**\n` +
                     `\`[${duration}]\`\n\n`;
             }
 
             if (tracks.length > 0) {
-                description += "**التالي بالقائمة**\n";
+                description += "**Ø§Ù„ØªØ§Ù„ÙŠ Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©**\n";
 
                 tracks.forEach((track, index) => {
                     const title =
                         track.info?.title ||
-                        "عنوان غير معروف";
+                        "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
                     const duration = formatDuration(
                         track.info?.duration
@@ -106,8 +106,8 @@ module.exports = {
                 });
             } else {
                 description +=
-                    "**التالي بالقائمة**\n" +
-                    "ماكو أغاني بالانتظار حاليًا.";
+                    "**Ø§Ù„ØªØ§Ù„ÙŠ Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©**\n" +
+                    "Ù…Ø§ÙƒÙˆ Ø£ØºØ§Ù†ÙŠ Ø¨Ø§Ù„Ø§Ù†ØªØ¸Ø§Ø± Ø­Ø§Ù„ÙŠÙ‹Ø§.";
             }
 
             // ==========================================
@@ -117,7 +117,7 @@ module.exports = {
             if (description.length > 4000) {
                 description =
                     description.substring(0, 3950) +
-                    "\n...وأكثر.";
+                    "\n...ÙˆØ£ÙƒØ«Ø±.";
             }
 
             // ==========================================
@@ -126,10 +126,10 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle("🎵 قائمة الأغاني")
+                .setTitle("ðŸŽµ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ")
                 .setDescription(description)
                 .setFooter({
-                    text: `Yowa Music • ${tracks.length} أغنية بالقائمة`
+                    text: `anas Music â€¢ ${tracks.length} Ø£ØºÙ†ÙŠØ© Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©`
                 });
 
             await message.channel.send({
@@ -138,17 +138,18 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Queue command error:",
+                "âŒ Queue command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "صار في خطأ وحنا نجيب قائمة الأغاني."
+                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

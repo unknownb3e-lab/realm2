@@ -1,4 +1,4 @@
-const {
+﻿const {
     EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
@@ -33,10 +33,10 @@ module.exports = {
             if (!channel) return;
 
             const title =
-                track.info?.title || "عنوان غير معروف";
+                track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const author =
-                track.info?.author || "فنان غير معروف";
+                track.info?.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const duration =
                 formatDuration(track.info?.duration);
@@ -54,15 +54,15 @@ module.exports = {
                 .setTitle(title)
                 .setDescription(
                     `**${author}**\n\n` +
-                    `طلبها: ${
+                    `Ø·Ù„Ø¨Ù‡Ø§: ${
                         track.requester
                             ? track.requester
-                            : "غير معروف"
+                            : "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"
                     }\n` +
-                    `المدة: **${duration}** • الصوت: **${volume}%**`
+                    `Ø§Ù„Ù…Ø¯Ø©: **${duration}** â€¢ Ø§Ù„ØµÙˆØª: **${volume}%**`
                 )
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             if (artwork) {
@@ -72,36 +72,37 @@ module.exports = {
             const buttons = new ActionRowBuilder().addComponents(
                 new ButtonBuilder()
                     .setCustomId("music_previous")
-                    .setEmoji("⏮️")
+                    .setEmoji("â®ï¸")
                     .setStyle(ButtonStyle.Secondary),
 
                 new ButtonBuilder()
                     .setCustomId("music_pause")
-                    .setEmoji("⏸️")
+                    .setEmoji("â¸ï¸")
                     .setStyle(ButtonStyle.Secondary),
 
                 new ButtonBuilder()
                     .setCustomId("music_skip")
-                    .setEmoji("⏭️")
+                    .setEmoji("â­ï¸")
                     .setStyle(ButtonStyle.Secondary),
 
                 new ButtonBuilder()
                     .setCustomId("music_stop")
-                    .setEmoji("⏹️")
+                    .setEmoji("â¹ï¸")
                     .setStyle(ButtonStyle.Secondary)
             );
 
             await channel.send({
-                content: `🎵 تشتغل الآن **${title}**`,
+                content: `ðŸŽµ ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù† **${title}**`,
                 embeds: [embed],
                 components: [buttons]
             });
 
         } catch (error) {
             console.error(
-                "❌ TrackStart event error:",
+                "âŒ TrackStart event error:",
                 error
             );
         }
     }
 };
+

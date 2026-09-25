@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 const { addHistory } = require("../utils/musicHistory");
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ماكو مشغل موسيقى شغال حاليًا."
+                                "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -28,7 +28,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
                     ]
                 });
@@ -43,7 +43,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
                     ]
                 });
@@ -57,14 +57,14 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ماكو أغنية تشتغل."
+                                "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„."
                             )
                     ]
                 });
             }
 
             const skippedTitle =
-                currentTrack.info?.title || "المقطع الحالي";
+                currentTrack.info?.title || "Ø§Ù„Ù…Ù‚Ø·Ø¹ Ø§Ù„Ø­Ø§Ù„ÙŠ";
 
             // ==========================================
             // SAVE CURRENT TRACK TO HISTORY
@@ -88,10 +88,10 @@ module.exports = {
             const embed = new EmbedBuilder()
                 .setColor("#808080")
                 .setDescription(
-                    `⏭️ تم تخطي **${skippedTitle}**.`
+                    `â­ï¸ ØªÙ… ØªØ®Ø·ÙŠ **${skippedTitle}**.`
                 )
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             await message.channel.send({
@@ -100,7 +100,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Skip command error:",
+                "âŒ Skip command error:",
                 error
             );
 
@@ -109,10 +109,11 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نتخطى الأغنية."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ØªØ®Ø·Ù‰ Ø§Ù„Ø£ØºÙ†ÙŠØ©."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

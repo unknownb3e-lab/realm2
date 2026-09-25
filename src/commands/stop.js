@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "stop",
@@ -12,7 +12,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setDescription("❌ ماكو مشغل موسيقى شغال حاليًا.")
+                            .setDescription("âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
                     ]
                 });
             }
@@ -25,7 +25,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
                     ]
                 });
@@ -40,7 +40,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
                     ]
                 });
@@ -84,11 +84,11 @@ module.exports = {
                 .setColor("#808080")
                 .setDescription(
                     is247
-                        ? "⏹️ تم إيقاف الموسيقى وتفريغ القائمة.\n🔒 **وضع 24/7 مفعّل، فرح أضل بالروم الصوتي.**"
-                        : "⏹️ تم إيقاف الموسيقى وتفريغ القائمة."
+                        ? "â¹ï¸ ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ ÙˆØªÙØ±ÙŠØº Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.\nðŸ”’ **ÙˆØ¶Ø¹ 24/7 Ù…ÙØ¹Ù‘Ù„ØŒ ÙØ±Ø­ Ø£Ø¶Ù„ Ø¨Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ.**"
+                        : "â¹ï¸ ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ ÙˆØªÙØ±ÙŠØº Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©."
                 )
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             await message.channel.send({
@@ -96,17 +96,18 @@ module.exports = {
             });
 
         } catch (error) {
-            console.error("❌ Stop command error:", error);
+            console.error("âŒ Stop command error:", error);
 
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نوقف الموسيقى."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ÙˆÙ‚Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

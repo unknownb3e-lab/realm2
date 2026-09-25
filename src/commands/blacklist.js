@@ -1,4 +1,4 @@
-const {
+﻿const {
     EmbedBuilder
 } = require("discord.js");
 
@@ -9,7 +9,7 @@ function createEmbed(description) {
         .setColor("#808080")
         .setDescription(description)
         .setFooter({
-            text: "Yowa"
+            text: "anas"
         });
 }
 
@@ -32,7 +32,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ بس مالك البوت يقدر يستخدم هذا الأمر."
+                            "âŒ Ø¨Ø³ Ù…Ø§Ù„Ùƒ Ø§Ù„Ø¨ÙˆØª ÙŠÙ‚Ø¯Ø± ÙŠØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -56,7 +56,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "📋 قائمة الحظر فاضية."
+                                "ðŸ“‹ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø± ÙØ§Ø¶ÙŠØ©."
                             )
                         ]
                     });
@@ -73,10 +73,10 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setTitle("🚫 المستخدمين المحظورين")
+                            .setTitle("ðŸš« Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†")
                             .setDescription(list)
                             .setFooter({
-                                text: `المجموع: ${users.length} مستخدم`
+                                text: `Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹: ${users.length} Ù…Ø³ØªØ®Ø¯Ù…`
                             })
                     ]
                 });
@@ -101,7 +101,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "❌ الرجاء منشن المستخدم.\n\nمثال: `>blacklist remove @user`"
+                                "âŒ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\nÙ…Ø«Ø§Ù„: `>blacklist remove @user`"
                             )
                         ]
                     });
@@ -116,7 +116,7 @@ module.exports = {
                     return message.reply({
                         embeds: [
                             createEmbed(
-                                "❌ هذا المستخدم مو محظور أصلاً."
+                                "âŒ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ùˆ Ù…Ø­Ø¸ÙˆØ± Ø£ØµÙ„Ø§Ù‹."
                             )
                         ]
                     });
@@ -125,7 +125,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            `✅ تم رفع الحظر عن <@${userId}>.`
+                            `âœ… ØªÙ… Ø±ÙØ¹ Ø§Ù„Ø­Ø¸Ø± Ø¹Ù† <@${userId}>.`
                         )
                     ]
                 });
@@ -146,7 +146,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ الرجاء منشن المستخدم.\n\n" +
+                            "âŒ Ø§Ù„Ø±Ø¬Ø§Ø¡ Ù…Ù†Ø´Ù† Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù….\n\n" +
                             "`>blacklist @user`\n" +
                             "`>blacklist remove @user`\n" +
                             "`>blacklist list`"
@@ -159,7 +159,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ ما أقدر أحظر نفسي."
+                            "âŒ Ù…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø­Ø¸Ø± Ù†ÙØ³ÙŠ."
                         )
                     ]
                 });
@@ -174,7 +174,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ هذا المستخدم محظور مسبقًا."
+                            "âŒ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ù…Ø­Ø¸ÙˆØ± Ù…Ø³Ø¨Ù‚Ù‹Ø§."
                         )
                     ]
                 });
@@ -188,24 +188,25 @@ module.exports = {
             return message.channel.send({
                 embeds: [
                     createEmbed(
-                        `🚫 تم **حظر** <@${userId}> من استخدام أوامر Yowa.`
+                        `ðŸš« ØªÙ… **Ø­Ø¸Ø±** <@${userId}> Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas.`
                     )
                 ]
             });
 
         } catch (error) {
             console.error(
-                "❌ Blacklist command error:",
+                "âŒ Blacklist command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ صار في خطأ وحنا ندير قائمة الحظر."
+                        "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¯ÙŠØ± Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø­Ø¸Ø±."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

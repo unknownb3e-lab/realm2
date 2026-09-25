@@ -1,4 +1,4 @@
-const { LavalinkManager } = require("lavalink-client");
+﻿const { LavalinkManager } = require("lavalink-client");
 const {
     EmbedBuilder,
     ActionRowBuilder,
@@ -49,7 +49,7 @@ function createMusicManager(client) {
 
         client: {
             id: client.user?.id || "",
-            username: client.user?.username || "Yowa",
+            username: client.user?.username || "anas",
         },
 
         // ==========================================
@@ -60,8 +60,8 @@ function createMusicManager(client) {
             defaultSearchPlatform: "ytmsearch",
 
             onDisconnect: {
-                autoReconnect: true,
-                destroyPlayer: false,
+                autoReconnect: false,
+                destroyPlayer: true,
             },
 
             onEmptyQueue: {
@@ -80,7 +80,7 @@ function createMusicManager(client) {
 
                         if (!lastPlayedTrack) {
                             console.log(
-                                "⚠️ Autoplay: No previous track found."
+                                "âš ï¸ Autoplay: No previous track found."
                             );
                             return;
                         }
@@ -93,7 +93,7 @@ function createMusicManager(client) {
 
                         if (!title) {
                             console.log(
-                                "⚠️ Autoplay: Track title unavailable."
+                                "âš ï¸ Autoplay: Track title unavailable."
                             );
                             return;
                         }
@@ -107,7 +107,7 @@ function createMusicManager(client) {
                             : title;
 
                         console.log(
-                            `🔄 Autoplay searching: ${query}`
+                            `ðŸ”„ Autoplay searching: ${query}`
                         );
 
                         const result = await player.search(
@@ -123,7 +123,7 @@ function createMusicManager(client) {
                             result.tracks.length === 0
                         ) {
                             console.log(
-                                "⚠️ Autoplay: No results found."
+                                "âš ï¸ Autoplay: No results found."
                             );
                             return;
                         }
@@ -193,7 +193,7 @@ function createMusicManager(client) {
 
                         if (differentTracks.length === 0) {
                             console.log(
-                                "⚠️ Autoplay: Couldn't find a different song."
+                                "âš ï¸ Autoplay: Couldn't find a different song."
                             );
                             return;
                         }
@@ -215,7 +215,7 @@ function createMusicManager(client) {
                         // MARK AUTOPLAY REQUESTER
                         // ==========================================
 
-                        nextTrack.requester = "التشغيل التلقائي";
+                        nextTrack.requester = "Ø§Ù„ØªØ´ØºÙŠÙ„ Ø§Ù„ØªÙ„Ù‚Ø§Ø¦ÙŠ";
 
                         // ==========================================
                         // ADD TO QUEUE
@@ -224,7 +224,7 @@ function createMusicManager(client) {
                         player.queue.add(nextTrack);
 
                         console.log(
-                            `🎵 Autoplay added: ${
+                            `ðŸŽµ Autoplay added: ${
                                 nextTrack.info?.title ||
                                 "Unknown Title"
                             }`
@@ -232,7 +232,7 @@ function createMusicManager(client) {
 
                     } catch (error) {
                         console.error(
-                            "❌ Autoplay error:",
+                            "âŒ Autoplay error:",
                             error
                         );
                     }
@@ -254,10 +254,10 @@ function createMusicManager(client) {
             if (!channel) return;
 
             const title =
-                track.info?.title || "عنوان غير معروف";
+                track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const author =
-                track.info?.author || "فنان غير معروف";
+                track.info?.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const duration =
                 formatDuration(track.info?.duration);
@@ -270,7 +270,7 @@ function createMusicManager(client) {
             const requester =
                 track.requester ||
                 track.info?.requester ||
-                "غير معروف";
+                "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const volume =
                 player.volume ?? 75;
@@ -280,11 +280,11 @@ function createMusicManager(client) {
                 .setTitle(title)
                 .setDescription(
                     `**${author}**\n\n` +
-                    `طلبها: ${requester}\n` +
-                    `المدة: **${duration}** • الصوت: **${volume}%**`
+                    `Ø·Ù„Ø¨Ù‡Ø§: ${requester}\n` +
+                    `Ø§Ù„Ù…Ø¯Ø©: **${duration}** â€¢ Ø§Ù„ØµÙˆØª: **${volume}%**`
                 )
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             if (artwork) {
@@ -296,34 +296,33 @@ function createMusicManager(client) {
 
                     new ButtonBuilder()
                         .setCustomId("music_previous")
-                        .setEmoji("⏮️")
+                        .setEmoji("â®ï¸")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_pause")
-                        .setEmoji("⏸️")
+                        .setEmoji("â¸ï¸")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_skip")
-                        .setEmoji("⏭️")
+                        .setEmoji("â­ï¸")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_stop")
-                        .setEmoji("⏹️")
+                        .setEmoji("â¹ï¸")
                         .setStyle(ButtonStyle.Secondary)
                 );
 
             await channel.send({
-                content: `🎵 تشتغل الآن **${title}**`,
                 embeds: [embed],
                 components: [buttons]
             });
 
         } catch (error) {
             console.error(
-                "❌ Track start panel error:",
+                "âŒ Track start panel error:",
                 error
             );
         }

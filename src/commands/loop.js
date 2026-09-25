@@ -1,9 +1,9 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`❌ ${description}`);
+        .setDescription(`âŒ ${description}`);
 }
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ماكو مشغل موسيقى شغال حاليًا."
+                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -31,7 +31,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -44,7 +44,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "لازم تكون بنفس الروم الصوتي مع البوت."
+                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -62,21 +62,21 @@ module.exports = {
 
                 const displayMode =
                     currentMode === "track"
-                        ? "الأغنية"
+                        ? "Ø§Ù„Ø£ØºÙ†ÙŠØ©"
                         : currentMode === "queue"
-                        ? "القائمة"
-                        : "متوقف";
+                        ? "Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©"
+                        : "Ù…ØªÙˆÙ‚Ù";
 
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                `🔁 وضع التكرار الحالي: **${displayMode}**\n\n` +
-                                `استخدم \`>loop off\`، \`>loop song\` أو \`>loop queue\`.`
+                                `ðŸ” ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ: **${displayMode}**\n\n` +
+                                `Ø§Ø³ØªØ®Ø¯Ù… \`>loop off\`ØŒ \`>loop song\` Ø£Ùˆ \`>loop queue\`.`
                             )
                             .setFooter({
-                                text: "Yowa Music"
+                                text: "anas Music"
                             })
                     ]
                 });
@@ -101,7 +101,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "وضع تكرار غير صحيح.\n\nاستخدم `>loop off`، `>loop song` أو `>loop queue`."
+                            "ÙˆØ¶Ø¹ ØªÙƒØ±Ø§Ø± ØºÙŠØ± ØµØ­ÙŠØ­.\n\nØ§Ø³ØªØ®Ø¯Ù… `>loop off`ØŒ `>loop song` Ø£Ùˆ `>loop queue`."
                         )
                     ]
                 });
@@ -120,18 +120,18 @@ module.exports = {
             let description;
 
             if (repeatMode === "off") {
-                description = "🔁 تم إيقاف التكرار.";
+                description = "ðŸ” ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„ØªÙƒØ±Ø§Ø±.";
             } else if (repeatMode === "track") {
-                description = "🔂 الأغنية الحالية رح تتكرر.";
+                description = "ðŸ”‚ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ© Ø±Ø­ ØªØªÙƒØ±Ø±.";
             } else {
-                description = "🔁 القائمة رح تتكرر.";
+                description = "ðŸ” Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø±Ø­ ØªØªÙƒØ±Ø±.";
             }
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
                 .setDescription(description)
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             await message.channel.send({
@@ -140,17 +140,18 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Loop command error:",
+                "âŒ Loop command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "صار في خطأ وحنا نغير وضع التكرار."
+                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ØºÙŠØ± ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø±."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

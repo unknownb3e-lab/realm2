@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "filters",
@@ -7,41 +7,41 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor("#808080")
             .setAuthor({
-                name: "Yowa Music • فلاتر الصوت"
+                name: "anas Music â€¢ ÙÙ„Ø§ØªØ± Ø§Ù„ØµÙˆØª"
             })
-            .setTitle("🎚️ الفلاتر المتوفرة")
+            .setTitle("ðŸŽšï¸ Ø§Ù„ÙÙ„Ø§ØªØ± Ø§Ù„Ù…ØªÙˆÙØ±Ø©")
             .setDescription(
-                "غيّر صوت المقطع الحالي باستخدام أحد الفلاتر بالأسفل."
+                "ØºÙŠÙ‘Ø± ØµÙˆØª Ø§Ù„Ù…Ù‚Ø·Ø¹ Ø§Ù„Ø­Ø§Ù„ÙŠ Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£Ø­Ø¯ Ø§Ù„ÙÙ„Ø§ØªØ± Ø¨Ø§Ù„Ø£Ø³ÙÙ„."
             )
             .addFields(
                 {
-                    name: "🔊 تعزيز الباص",
-                    value: "`>filter bassboost`\nيعزز الباص لصوت أعمق.",
+                    name: "ðŸ”Š ØªØ¹Ø²ÙŠØ² Ø§Ù„Ø¨Ø§Øµ",
+                    value: "`>filter bassboost`\nÙŠØ¹Ø²Ø² Ø§Ù„Ø¨Ø§Øµ Ù„ØµÙˆØª Ø£Ø¹Ù…Ù‚.",
                     inline: false
                 },
                 {
-                    name: "🌙 Nightcore",
-                    value: "`>filter nightcore`\nيزيد السرعة والنبرة.",
+                    name: "ðŸŒ™ Nightcore",
+                    value: "`>filter nightcore`\nÙŠØ²ÙŠØ¯ Ø§Ù„Ø³Ø±Ø¹Ø© ÙˆØ§Ù„Ù†Ø¨Ø±Ø©.",
                     inline: false
                 },
                 {
-                    name: "🐌 تبطيء",
-                    value: "`>filter slowed`\nيبطّئ الأغنية الحالية.",
+                    name: "ðŸŒ ØªØ¨Ø·ÙŠØ¡",
+                    value: "`>filter slowed`\nÙŠØ¨Ø·Ù‘Ø¦ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©.",
                     inline: false
                 },
                 {
-                    name: "⚡ تسريع",
-                    value: "`>filter speedup`\nيخلي الأغنية الحالية تشتغل أسرع.",
+                    name: "âš¡ ØªØ³Ø±ÙŠØ¹",
+                    value: "`>filter speedup`\nÙŠØ®Ù„ÙŠ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ© ØªØ´ØªØºÙ„ Ø£Ø³Ø±Ø¹.",
                     inline: false
                 },
                 {
-                    name: "🎚️ طبيعي",
-                    value: "`>filter normal`\nيشيل كل الفلاتر الفعالة.",
+                    name: "ðŸŽšï¸ Ø·Ø¨ÙŠØ¹ÙŠ",
+                    value: "`>filter normal`\nÙŠØ´ÙŠÙ„ ÙƒÙ„ Ø§Ù„ÙÙ„Ø§ØªØ± Ø§Ù„ÙØ¹Ø§Ù„Ø©.",
                     inline: false
                 }
             )
             .setFooter({
-                text: `Yowa Music • طلبها ${message.author.username}`
+                text: `anas Music â€¢ Ø·Ù„Ø¨Ù‡Ø§ ${message.author.username}`
             })
             .setTimestamp();
 
@@ -50,3 +50,4 @@ module.exports = {
         });
     }
 };
+

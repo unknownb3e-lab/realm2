@@ -1,9 +1,9 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`❌ ${description}`);
+        .setDescription(`âŒ ${description}`);
 }
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ماكو مشغل موسيقى شغال حاليًا."
+                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -39,7 +39,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -52,7 +52,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "لازم تكون بنفس الروم الصوتي مع البوت."
+                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -70,10 +70,10 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                `🔊 مستوى الصوت الحالي: **${currentVolume}%**`
+                                `ðŸ”Š Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø§Ù„Ø­Ø§Ù„ÙŠ: **${currentVolume}%**`
                             )
                             .setFooter({
-                                text: "Yowa Music"
+                                text: "anas Music"
                             })
                     ]
                 });
@@ -89,7 +89,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "الرجاء كتابة رقم صحيح للصوت."
+                            "Ø§Ù„Ø±Ø¬Ø§Ø¡ ÙƒØªØ§Ø¨Ø© Ø±Ù‚Ù… ØµØ­ÙŠØ­ Ù„Ù„ØµÙˆØª."
                         )
                     ]
                 });
@@ -103,7 +103,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "مستوى الصوت لازم يكون بين **0** و **150**."
+                            "Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ù„Ø§Ø²Ù… ÙŠÙƒÙˆÙ† Ø¨ÙŠÙ† **0** Ùˆ **150**."
                         )
                     ]
                 });
@@ -122,10 +122,10 @@ module.exports = {
             const embed = new EmbedBuilder()
                 .setColor("#808080")
                 .setDescription(
-                    `🔊 تم ضبط مستوى الصوت على **${volume}%**.`
+                    `ðŸ”Š ØªÙ… Ø¶Ø¨Ø· Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø¹Ù„Ù‰ **${volume}%**.`
                 )
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             await message.channel.send({
@@ -134,17 +134,18 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Volume command error:",
+                "âŒ Volume command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "صار في خطأ وحنا نغير مستوى الصوت."
+                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ØºÙŠØ± Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

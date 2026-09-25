@@ -1,11 +1,11 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "ping",
 
     async execute({ client, message }) {
         try {
-            const sent = await message.channel.send("🏓 عم أفحص الاتصال...");
+            const sent = await message.channel.send("ðŸ“ Ø¹Ù… Ø£ÙØ­Øµ Ø§Ù„Ø§ØªØµØ§Ù„...");
 
             const messageLatency =
                 sent.createdTimestamp - message.createdTimestamp;
@@ -13,47 +13,47 @@ module.exports = {
             const websocketLatency =
                 client.ws.ping;
 
-            let status = "🟢 ممتاز";
+            let status = "ðŸŸ¢ Ù…Ù…ØªØ§Ø²";
 
             if (websocketLatency >= 150 && websocketLatency < 300) {
-                status = "🟡 جيد";
+                status = "ðŸŸ¡ Ø¬ÙŠØ¯";
             } else if (websocketLatency >= 300) {
-                status = "🔴 بطيء";
+                status = "ðŸ”´ Ø¨Ø·ÙŠØ¡";
             }
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
                 .setAuthor({
-                    name: "Yowa Music • حالة النظام"
+                    name: "anas Music â€¢ Ø­Ø§Ù„Ø© Ø§Ù„Ù†Ø¸Ø§Ù…"
                 })
-                .setTitle("⚡ فحص الاتصال")
+                .setTitle("âš¡ ÙØ­Øµ Ø§Ù„Ø§ØªØµØ§Ù„")
                 .setDescription(
-                    "كلشي تمام. هاي حالة الاتصال الحالية."
+                    "ÙƒÙ„Ø´ÙŠ ØªÙ…Ø§Ù…. Ù‡Ø§ÙŠ Ø­Ø§Ù„Ø© Ø§Ù„Ø§ØªØµØ§Ù„ Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
                 )
                 .addFields(
                     {
-                        name: "🤖 استجابة البوت",
+                        name: "ðŸ¤– Ø§Ø³ØªØ¬Ø§Ø¨Ø© Ø§Ù„Ø¨ÙˆØª",
                         value: `\`${messageLatency}ms\``,
                         inline: true
                     },
                     {
-                        name: "🌐 WebSocket",
+                        name: "ðŸŒ WebSocket",
                         value: `\`${websocketLatency}ms\``,
                         inline: true
                     },
                     {
-                        name: "📡 الحالة",
+                        name: "ðŸ“¡ Ø§Ù„Ø­Ø§Ù„Ø©",
                         value: status,
                         inline: true
                     }
                 )
                 .addFields({
-                    name: "👤 طلبها",
+                    name: "ðŸ‘¤ Ø·Ù„Ø¨Ù‡Ø§",
                     value: `${message.author}`,
                     inline: false
                 })
                 .setFooter({
-                    text: "Yowa Music • مراقب الأداء"
+                    text: "anas Music â€¢ Ù…Ø±Ø§Ù‚Ø¨ Ø§Ù„Ø£Ø¯Ø§Ø¡"
                 })
                 .setTimestamp();
 
@@ -63,17 +63,18 @@ module.exports = {
             });
 
         } catch (error) {
-            console.error("❌ Ping command error:", error);
+            console.error("âŒ Ping command error:", error);
 
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ ما قدرت أفحص اتصال البوت."
+                            "âŒ Ù…Ø§ Ù‚Ø¯Ø±Øª Ø£ÙØ­Øµ Ø§ØªØµØ§Ù„ Ø§Ù„Ø¨ÙˆØª."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

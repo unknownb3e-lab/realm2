@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "pause",
@@ -12,7 +12,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setDescription("❌ ماكو مشغل موسيقى شغال حاليًا.")
+                            .setDescription("âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
                     ]
                 });
             }
@@ -25,7 +25,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
                     ]
                 });
@@ -40,7 +40,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
                     ]
                 });
@@ -51,7 +51,7 @@ module.exports = {
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#808080")
-                            .setDescription("⏸️ الموسيقى متوقفة مؤقتًا أصلاً.")
+                            .setDescription("â¸ï¸ Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ù…ØªÙˆÙ‚ÙØ© Ù…Ø¤Ù‚ØªÙ‹Ø§ Ø£ØµÙ„Ø§Ù‹.")
                     ]
                 });
             }
@@ -60,9 +60,9 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setDescription("⏸️ تم إيقاف الموسيقى مؤقتًا.")
+                .setDescription("â¸ï¸ ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ù…Ø¤Ù‚ØªÙ‹Ø§.")
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             await message.channel.send({
@@ -70,17 +70,18 @@ module.exports = {
             });
 
         } catch (error) {
-            console.error("❌ Pause command error:", error);
+            console.error("âŒ Pause command error:", error);
 
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نوقف الموسيقى مؤقتًا."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ÙˆÙ‚Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ù…Ø¤Ù‚ØªÙ‹Ø§."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

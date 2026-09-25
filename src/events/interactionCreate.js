@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 const {
     addHistory,
     getPrevious
@@ -12,7 +12,7 @@ module.exports = {
 
 // Help menu buttons are handled by the help command collector
 if (
-    interaction.customId.startsWith("yowa_help_")
+    interaction.customId.startsWith("anas_help_")
 ) {
     return;
 }
@@ -24,7 +24,7 @@ if (
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#808080")
-                        .setDescription("❌ ماكو مشغل موسيقى شغال حاليًا.")
+                        .setDescription("âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
                 ],
                 ephemeral: true
             });
@@ -38,7 +38,7 @@ if (
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ لازم تكون بروم صوتي حتى تستخدم أزرار التحكم."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ­ÙƒÙ…."
                         )
                 ],
                 ephemeral: true
@@ -54,7 +54,7 @@ if (
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                 ],
                 ephemeral: true
@@ -82,7 +82,7 @@ if (
                                     style: 2,
                                     label: null,
                                     emoji: {
-                                        name: "⏸️"
+                                        name: "â¸ï¸"
                                     },
                                     custom_id: "music_pause"
                                 };
@@ -114,7 +114,7 @@ if (
                                 style: 2,
                                 label: null,
                                 emoji: {
-                                    name: "▶️"
+                                    name: "â–¶ï¸"
                                 },
                                 custom_id: "music_pause"
                             };
@@ -149,7 +149,7 @@ if (
                                 new EmbedBuilder()
                                     .setColor("#808080")
                                     .setDescription(
-                                        "❌ ماكو أغنية تشتغل."
+                                        "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„."
                                     )
                             ],
                             ephemeral: true
@@ -168,7 +168,7 @@ if (
                         embeds: [
                             new EmbedBuilder()
                                 .setColor("#808080")
-                                .setDescription("⏭️ تم تخطي الأغنية.")
+                                .setDescription("â­ï¸ ØªÙ… ØªØ®Ø·ÙŠ Ø§Ù„Ø£ØºÙ†ÙŠØ©.")
                         ],
                         ephemeral: true
                     });
@@ -208,7 +208,7 @@ if (
                                 new EmbedBuilder()
                                     .setColor("#808080")
                                     .setDescription(
-                                        "❌ ماكو أغنية سابقة."
+                                        "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© Ø³Ø§Ø¨Ù‚Ø©."
                                     )
                             ],
                             ephemeral: true
@@ -239,7 +239,7 @@ if (
                             new EmbedBuilder()
                                 .setColor("#808080")
                                 .setDescription(
-                                    `⏮️ عم تشتغل الأغنية السابقة: **${previousTrack.info?.title || "عنوان غير معروف"}**`
+                                    `â®ï¸ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${previousTrack.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"}**`
                                 )
                         ],
                         ephemeral: true
@@ -250,7 +250,7 @@ if (
             }
 
         } catch (error) {
-            console.error("❌ Music button error:", error);
+            console.error("âŒ Music button error:", error);
 
             if (!interaction.replied && !interaction.deferred) {
                 await interaction.reply({
@@ -258,7 +258,7 @@ if (
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ صار في خطأ وحنا نستخدم هذا الزر."
+                                "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø²Ø±."
                             )
                     ],
                     ephemeral: true

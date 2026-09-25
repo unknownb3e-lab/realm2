@@ -1,4 +1,4 @@
-const {
+﻿const {
     EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
@@ -22,8 +22,8 @@ function formatDuration(ms) {
 }
 
 function createMusicPanel(track) {
-    const title = track.info?.title || "عنوان غير معروف";
-    const author = track.info?.author || "فنان غير معروف";
+    const title = track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
+    const author = track.info?.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
     const duration = formatDuration(track.info?.duration);
 
     const artwork =
@@ -36,11 +36,11 @@ function createMusicPanel(track) {
         .setTitle(title)
         .setDescription(
             `**${author}**\n\n` +
-            `طلبها: ${track.requester || "غير معروف"}\n` +
-            `المدة: **${duration}** • الصوت: **75%**`
+            `Ø·Ù„Ø¨Ù‡Ø§: ${track.requester || "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"}\n` +
+            `Ø§Ù„Ù…Ø¯Ø©: **${duration}** â€¢ Ø§Ù„ØµÙˆØª: **75%**`
         )
         .setFooter({
-            text: "Yowa Music"
+            text: "anas Music"
         });
 
     if (artwork) {
@@ -50,22 +50,22 @@ function createMusicPanel(track) {
     const buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
             .setCustomId("music_previous")
-            .setEmoji("⏮️")
+            .setEmoji("â®ï¸")
             .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("music_pause")
-            .setEmoji("⏸️")
+            .setEmoji("â¸ï¸")
             .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("music_skip")
-            .setEmoji("⏭️")
+            .setEmoji("â­ï¸")
             .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("music_stop")
-            .setEmoji("⏹️")
+            .setEmoji("â¹ï¸")
             .setStyle(ButtonStyle.Secondary)
     );
 
@@ -78,3 +78,4 @@ function createMusicPanel(track) {
 module.exports = {
     createMusicPanel
 };
+

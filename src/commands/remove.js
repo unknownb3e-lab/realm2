@@ -1,11 +1,11 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 function createEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
         .setDescription(description)
         .setFooter({
-            text: "Yowa Music"
+            text: "anas Music"
         });
 }
 
@@ -22,7 +22,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ ماكو مشغل موسيقى شغال حاليًا."
+                            "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -35,7 +35,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -65,7 +65,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ الاستخدام: `>remove queue <رقم>`\n\nمثال: `>remove queue 2`"
+                            "âŒ Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…: `>remove queue <Ø±Ù‚Ù…>`\n\nÙ…Ø«Ø§Ù„: `>remove queue 2`"
                         )
                     ]
                 });
@@ -77,7 +77,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ الرجاء كتابة رقم صحيح بالقائمة."
+                            "âŒ Ø§Ù„Ø±Ø¬Ø§Ø¡ ÙƒØªØ§Ø¨Ø© Ø±Ù‚Ù… ØµØ­ÙŠØ­ Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©."
                         )
                     ]
                 });
@@ -93,7 +93,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ القائمة فاضية."
+                            "âŒ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© ÙØ§Ø¶ÙŠØ©."
                         )
                     ]
                 });
@@ -103,7 +103,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            `❌ ماكو أغنية بالرقم **${position}** بالقائمة.`
+                            `âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© Ø¨Ø§Ù„Ø±Ù‚Ù… **${position}** Ø¨Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.`
                         )
                     ]
                 });
@@ -116,7 +116,7 @@ module.exports = {
             const track = queue.tracks[position - 1];
 
             const title =
-                track?.info?.title || "عنوان غير معروف";
+                track?.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             // ==========================================
             // REMOVE TRACK
@@ -131,24 +131,25 @@ module.exports = {
             await message.channel.send({
                 embeds: [
                     createEmbed(
-                        `🗑️ تم حذف **${title}** من القائمة.`
+                        `ðŸ—‘ï¸ ØªÙ… Ø­Ø°Ù **${title}** Ù…Ù† Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.`
                     )
                 ]
             });
 
         } catch (error) {
             console.error(
-                "❌ Remove command error:",
+                "âŒ Remove command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ صار في خطأ وحنا نحذف هاي الأغنية."
+                        "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø­Ø°Ù Ù‡Ø§ÙŠ Ø§Ù„Ø£ØºÙ†ÙŠØ©."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

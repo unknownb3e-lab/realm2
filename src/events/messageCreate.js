@@ -1,4 +1,4 @@
-const Blacklist = require("../models/Blacklist");
+﻿const Blacklist = require("../models/Blacklist");
 
 module.exports = {
     name: "messageCreate",
@@ -54,12 +54,12 @@ module.exports = {
 
                 if (blacklisted) {
                     return message.reply(
-                        "🚫 أنت محظور من استخدام أوامر Yowa."
+                        "ðŸš« Ø£Ù†Øª Ù…Ø­Ø¸ÙˆØ± Ù…Ù† Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£ÙˆØ§Ù…Ø± anas."
                     ).catch(() => {});
                 }
             } catch (error) {
                 console.error(
-                    "❌ Blacklist check error:",
+                    "âŒ Blacklist check error:",
                     error
                 );
 
@@ -79,7 +79,7 @@ module.exports = {
             });
         } catch (error) {
             console.error(
-                `❌ ${commandName} command error:`,
+                `âŒ ${commandName} command error:`,
                 error
             );
 
@@ -87,7 +87,7 @@ module.exports = {
 
             await message.channel
                 .send(
-                    "❌ صار في خطأ وحنا ننفذ هذا الأمر."
+                    "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ù†ÙØ° Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                 )
                 .catch(() => {});
         }

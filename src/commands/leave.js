@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "leave",
@@ -15,7 +15,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ أنا مو متصل بروم صوتي."
+                                "âŒ Ø£Ù†Ø§ Ù…Ùˆ Ù…ØªØµÙ„ Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ."
                             )
                     ]
                 });
@@ -29,7 +29,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
                     ]
                 });
@@ -44,7 +44,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                                "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
                     ]
                 });
@@ -63,10 +63,10 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "🔒 **وضع 24/7 مفعّل.**\n\nما أقدر أطلع من الروم الصوتي وهو شغال."
+                                "ðŸ”’ **ÙˆØ¶Ø¹ 24/7 Ù…ÙØ¹Ù‘Ù„.**\n\nÙ…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø·Ù„Ø¹ Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ ÙˆÙ‡Ùˆ Ø´ØºØ§Ù„."
                             )
                             .setFooter({
-                                text: "Yowa Music"
+                                text: "anas Music"
                             })
                     ]
                 });
@@ -109,12 +109,12 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle("👋 تم قطع الاتصال")
+                .setTitle("ðŸ‘‹ ØªÙ… Ù‚Ø·Ø¹ Ø§Ù„Ø§ØªØµØ§Ù„")
                 .setDescription(
-                    "طلعت من الروم الصوتي وفرّغت قائمة الأغاني."
+                    "Ø·Ù„Ø¹Øª Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ ÙˆÙØ±Ù‘ØºØª Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ."
                 )
                 .setFooter({
-                    text: "Yowa Music"
+                    text: "anas Music"
                 });
 
             await message.channel.send({
@@ -123,7 +123,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Leave command error:",
+                "âŒ Leave command error:",
                 error
             );
 
@@ -132,10 +132,11 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نطلع من الروم الصوتي."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø·Ù„Ø¹ Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

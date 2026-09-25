@@ -1,11 +1,11 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 function createEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
         .setDescription(description)
         .setFooter({
-            text: "Yowa Music"
+            text: "anas Music"
         });
 }
 
@@ -22,7 +22,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ ماكو مشغل موسيقى شغال حاليًا."
+                            "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -35,7 +35,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -58,7 +58,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ ماكو أغنية تشتغل حاليًا."
+                            "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -72,7 +72,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ الرجاء كتابة اسم الفلتر.\n\nمثال: `>filter bassboost`"
+                            "âŒ Ø§Ù„Ø±Ø¬Ø§Ø¡ ÙƒØªØ§Ø¨Ø© Ø§Ø³Ù… Ø§Ù„ÙÙ„ØªØ±.\n\nÙ…Ø«Ø§Ù„: `>filter bassboost`"
                         )
                     ]
                 });
@@ -85,7 +85,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ الفلاتر مو متوفرة بهذا المشغل."
+                            "âŒ Ø§Ù„ÙÙ„Ø§ØªØ± Ù…Ùˆ Ù…ØªÙˆÙØ±Ø© Ø¨Ù‡Ø°Ø§ Ø§Ù„Ù…Ø´ØºÙ„."
                         )
                     ]
                 });
@@ -105,7 +105,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            "🎚️ **تمت إعادة ضبط الفلاتر!**\n\nرجعت الأغنية لوضعها الطبيعي."
+                            "ðŸŽšï¸ **ØªÙ…Øª Ø¥Ø¹Ø§Ø¯Ø© Ø¶Ø¨Ø· Ø§Ù„ÙÙ„Ø§ØªØ±!**\n\nØ±Ø¬Ø¹Øª Ø§Ù„Ø£ØºÙ†ÙŠØ© Ù„ÙˆØ¶Ø¹Ù‡Ø§ Ø§Ù„Ø·Ø¨ÙŠØ¹ÙŠ."
                         )
                     ]
                 });
@@ -136,7 +136,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            "🔊 **تم تفعيل تعزيز الباص!**\n\nصار الباص أقوى."
+                            "ðŸ”Š **ØªÙ… ØªÙØ¹ÙŠÙ„ ØªØ¹Ø²ÙŠØ² Ø§Ù„Ø¨Ø§Øµ!**\n\nØµØ§Ø± Ø§Ù„Ø¨Ø§Øµ Ø£Ù‚ÙˆÙ‰."
                         )
                     ]
                 });
@@ -162,7 +162,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            "🌙 **تم تفعيل Nightcore!**\n\nزادت السرعة والنبرة."
+                            "ðŸŒ™ **ØªÙ… ØªÙØ¹ÙŠÙ„ Nightcore!**\n\nØ²Ø§Ø¯Øª Ø§Ù„Ø³Ø±Ø¹Ø© ÙˆØ§Ù„Ù†Ø¨Ø±Ø©."
                         )
                     ]
                 });
@@ -183,7 +183,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            "🐌 **تم تفعيل التبطيء!**\n\nصارت الأغنية تشتغل أبطأ."
+                            "ðŸŒ **ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„ØªØ¨Ø·ÙŠØ¡!**\n\nØµØ§Ø±Øª Ø§Ù„Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø£Ø¨Ø·Ø£."
                         )
                     ]
                 });
@@ -205,7 +205,7 @@ module.exports = {
                 return message.channel.send({
                     embeds: [
                         createEmbed(
-                            "⚡ **تم تفعيل التسريع!**\n\nصارت الأغنية تشتغل أسرع."
+                            "âš¡ **ØªÙ… ØªÙØ¹ÙŠÙ„ Ø§Ù„ØªØ³Ø±ÙŠØ¹!**\n\nØµØ§Ø±Øª Ø§Ù„Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø£Ø³Ø±Ø¹."
                         )
                     ]
                 });
@@ -218,24 +218,25 @@ module.exports = {
             return message.reply({
                 embeds: [
                     createEmbed(
-                        `❌ فلتر غير معروف: **${args.join(" ")}**\n\nاستخدم \`>filters\` لتشوف الفلاتر المتوفرة.`
+                        `âŒ ÙÙ„ØªØ± ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ: **${args.join(" ")}**\n\nØ§Ø³ØªØ®Ø¯Ù… \`>filters\` Ù„ØªØ´ÙˆÙ Ø§Ù„ÙÙ„Ø§ØªØ± Ø§Ù„Ù…ØªÙˆÙØ±Ø©.`
                     )
                 ]
             });
 
         } catch (error) {
             console.error(
-                "❌ Filter command error:",
+                "âŒ Filter command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ صار في خطأ وحنا نطبق الفلتر."
+                        "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø·Ø¨Ù‚ Ø§Ù„ÙÙ„ØªØ±."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

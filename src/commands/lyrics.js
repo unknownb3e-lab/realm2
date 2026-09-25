@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 const { getLyrics } = require("genius-lyrics-api");
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ماكو مشغل موسيقى شغال حاليًا."
+                                "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -30,7 +30,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ماكو أغنية تشتغل حاليًا."
+                                "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ما قدرت أحدد الأغنية الحالية."
+                                "âŒ Ù…Ø§ Ù‚Ø¯Ø±Øª Ø£Ø­Ø¯Ø¯ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
                             )
                     ]
                 });
@@ -71,10 +71,10 @@ module.exports = {
                             .setColor("#808080")
                             .setTitle(title)
                             .setDescription(
-                                `❌ ما لقيت كلمات لـ **${title}**.`
+                                `âŒ Ù…Ø§ Ù„Ù‚ÙŠØª ÙƒÙ„Ù…Ø§Øª Ù„Ù€ **${title}**.`
                             )
                             .setFooter({
-                                text: "Yowa Music"
+                                text: "anas Music"
                             })
                     ]
                 });
@@ -91,17 +91,17 @@ module.exports = {
             if (lyricsText.length > maxLength) {
                 lyricsText =
                     lyricsText.substring(0, maxLength) +
-                    "\n\n... تم اختصار الكلمات.";
+                    "\n\n... ØªÙ… Ø§Ø®ØªØµØ§Ø± Ø§Ù„ÙƒÙ„Ù…Ø§Øª.";
             }
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle(`🎵 ${title}`)
+                .setTitle(`ðŸŽµ ${title}`)
                 .setDescription(
                     `**${artist}**\n\n${lyricsText}`
                 )
                 .setFooter({
-                    text: "Yowa Music • الكلمات"
+                    text: "anas Music â€¢ Ø§Ù„ÙƒÙ„Ù…Ø§Øª"
                 });
 
             await message.channel.send({
@@ -110,7 +110,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Lyrics command error:",
+                "âŒ Lyrics command error:",
                 error
             );
 
@@ -119,10 +119,11 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نجيب الكلمات."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„ÙƒÙ„Ù…Ø§Øª."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

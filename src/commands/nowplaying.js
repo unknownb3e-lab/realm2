@@ -1,4 +1,4 @@
-const {
+﻿const {
     EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
@@ -23,7 +23,7 @@ function formatDuration(ms) {
 
 function createProgressBar(position, duration) {
     if (!duration || duration <= 0) {
-        return "━━━━━━━━━━━━━━━━━━━━";
+        return "â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”";
     }
 
     const progress = Math.min(position / duration, 1);
@@ -31,9 +31,9 @@ function createProgressBar(position, duration) {
     const currentBlock = Math.floor(progress * totalBlocks);
 
     return (
-        "▬".repeat(Math.max(0, currentBlock)) +
-        "🔘" +
-        "▬".repeat(Math.max(0, totalBlocks - currentBlock))
+        "â–¬".repeat(Math.max(0, currentBlock)) +
+        "ðŸ”˜" +
+        "â–¬".repeat(Math.max(0, totalBlocks - currentBlock))
     );
 }
 
@@ -52,7 +52,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ماكو مشغل موسيقى شغال حاليًا."
+                                "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -66,7 +66,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#808080")
                             .setDescription(
-                                "❌ ماكو أغنية تشتغل حاليًا."
+                                "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
                     ]
                 });
@@ -75,10 +75,10 @@ module.exports = {
             const info = track.info || {};
 
             const title =
-                info.title || "عنوان غير معروف";
+                info.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const author =
-                info.author || "فنان غير معروف";
+                info.author || "ÙÙ†Ø§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const durationMs =
                 info.duration || 0;
@@ -97,13 +97,13 @@ module.exports = {
 
             const status =
                 player.paused
-                    ? "⏸️ متوقفة مؤقتًا"
-                    : "▶️ تشتغل";
+                    ? "â¸ï¸ Ù…ØªÙˆÙ‚ÙØ© Ù…Ø¤Ù‚ØªÙ‹Ø§"
+                    : "â–¶ï¸ ØªØ´ØªØºÙ„";
 
             const requester =
                 track.requester
                     ? track.requester.toString()
-                    : "غير معروف";
+                    : "ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             const progressBar =
                 createProgressBar(
@@ -118,17 +118,17 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setColor("#808080")
-                .setTitle(`🎵 ${title}`)
+                .setTitle(`ðŸŽµ ${title}`)
                 .setDescription(
                     `**${author}**\n\n` +
                     `${status}\n\n` +
                     `${progressBar}\n` +
                     `\`${position} / ${duration}\`\n\n` +
-                    `🔊 الصوت: **${volume}%**\n` +
-                    `👤 طلبها: ${requester}`
+                    `ðŸ”Š Ø§Ù„ØµÙˆØª: **${volume}%**\n` +
+                    `ðŸ‘¤ Ø·Ù„Ø¨Ù‡Ø§: ${requester}`
                 )
                 .setFooter({
-                    text: "Yowa Music • تشتغل الآن"
+                    text: "anas Music â€¢ ØªØ´ØªØºÙ„ Ø§Ù„Ø¢Ù†"
                 });
 
             if (artwork) {
@@ -139,26 +139,26 @@ module.exports = {
                 new ActionRowBuilder().addComponents(
                     new ButtonBuilder()
                         .setCustomId("music_previous")
-                        .setEmoji("⏮️")
+                        .setEmoji("â®ï¸")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_pause")
                         .setEmoji(
                             player.paused
-                                ? "▶️"
-                                : "⏸️"
+                                ? "â–¶ï¸"
+                                : "â¸ï¸"
                         )
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_skip")
-                        .setEmoji("⏭️")
+                        .setEmoji("â­ï¸")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_stop")
-                        .setEmoji("⏹️")
+                        .setEmoji("â¹ï¸")
                         .setStyle(ButtonStyle.Secondary)
                 );
 
@@ -169,7 +169,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Now Playing command error:",
+                "âŒ Now Playing command error:",
                 error
             );
 
@@ -178,10 +178,11 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نجيب الأغنية الحالية."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

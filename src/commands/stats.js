@@ -1,4 +1,4 @@
-const {
+﻿const {
     EmbedBuilder
 } = require("discord.js");
 
@@ -12,11 +12,11 @@ function formatUptime(ms) {
 
     const parts = [];
 
-    if (days) parts.push(`${days}ي`);
-    if (hours) parts.push(`${hours}س`);
-    if (minutes) parts.push(`${minutes}د`);
+    if (days) parts.push(`${days}ÙŠ`);
+    if (hours) parts.push(`${hours}Ø³`);
+    if (minutes) parts.push(`${minutes}Ø¯`);
     if (secs || parts.length === 0) {
-        parts.push(`${secs}ث`);
+        parts.push(`${secs}Ø«`);
     }
 
     return parts.join(" ");
@@ -75,38 +75,38 @@ module.exports = {
             const embed =
                 new EmbedBuilder()
                     .setColor("#808080")
-                    .setTitle("📊 إحصائيات Yowa")
+                    .setTitle("ðŸ“Š Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª anas")
                     .setDescription(
-                        "هاي إحصائياتي الحية الحالية."
+                        "Ù‡Ø§ÙŠ Ø¥Ø­ØµØ§Ø¦ÙŠØ§ØªÙŠ Ø§Ù„Ø­ÙŠØ© Ø§Ù„Ø­Ø§Ù„ÙŠØ©."
                     )
                     .addFields(
                         {
-                            name: "🌐 السيرفرات",
+                            name: "ðŸŒ Ø§Ù„Ø³ÙŠØ±ÙØ±Ø§Øª",
                             value: `\`${guildCount}\``,
                             inline: true
                         },
                         {
-                            name: "👥 المستخدمين",
+                            name: "ðŸ‘¥ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ†",
                             value: `\`${userCount.toLocaleString()}\``,
                             inline: true
                         },
                         {
-                            name: "🏓 البينغ",
+                            name: "ðŸ“ Ø§Ù„Ø¨ÙŠÙ†Øº",
                             value: `\`${ping}\``,
                             inline: true
                         },
                         {
-                            name: "⏱️ مدة التشغيل",
+                            name: "â±ï¸ Ù…Ø¯Ø© Ø§Ù„ØªØ´ØºÙŠÙ„",
                             value: `\`${uptime}\``,
                             inline: true
                         },
                         {
-                            name: "🎵 المشغلات الفعالة",
+                            name: "ðŸŽµ Ø§Ù„Ù…Ø´ØºÙ„Ø§Øª Ø§Ù„ÙØ¹Ø§Ù„Ø©",
                             value: `\`${activePlayers}\``,
                             inline: true
                         },
                         {
-                            name: "🟢 Lavalink",
+                            name: "ðŸŸ¢ Lavalink",
                             value:
                                 totalNodes > 0
                                     ? `\`${connectedNodes}/${totalNodes}\``
@@ -114,23 +114,23 @@ module.exports = {
                             inline: true
                         },
                         {
-                            name: "💾 الذاكرة",
+                            name: "ðŸ’¾ Ø§Ù„Ø°Ø§ÙƒØ±Ø©",
                             value: `\`${formatMemory(memory.rss)}\``,
                             inline: true
                         },
                         {
-                            name: "🧠 Heap",
+                            name: "ðŸ§  Heap",
                             value: `\`${formatMemory(memory.heapUsed)} / ${formatMemory(memory.heapTotal)}\``,
                             inline: true
                         },
                         {
-                            name: "🤖 Discord.js",
+                            name: "ðŸ¤– Discord.js",
                             value: `\`v${require("discord.js").version}\``,
                             inline: true
                         }
                     )
                     .setFooter({
-                        text: "Yowa Music • إحصائيات حية"
+                        text: "anas Music â€¢ Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª Ø­ÙŠØ©"
                     })
                     .setTimestamp();
 
@@ -140,7 +140,7 @@ module.exports = {
 
         } catch (error) {
             console.error(
-                "❌ Stats command error:",
+                "âŒ Stats command error:",
                 error
             );
 
@@ -149,10 +149,11 @@ module.exports = {
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            "❌ صار في خطأ وحنا نجيب إحصائيات البوت."
+                            "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¬ÙŠØ¨ Ø¥Ø­ØµØ§Ø¦ÙŠØ§Øª Ø§Ù„Ø¨ÙˆØª."
                         )
                 ]
             }).catch(() => {});
         }
     }
 };
+

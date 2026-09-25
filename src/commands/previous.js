@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 const {
     addHistory,
@@ -8,7 +8,7 @@ const {
 function errorEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
-        .setDescription(`❌ ${description}`);
+        .setDescription(`âŒ ${description}`);
 }
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -44,7 +44,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ماكو مشغل موسيقى شغال حاليًا."
+                            "Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -61,7 +61,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "لازم تكون بنفس الروم الصوتي مع البوت."
+                            "Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -79,7 +79,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         errorEmbed(
-                            "ماكو أغنية سابقة."
+                            "Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© Ø³Ø§Ø¨Ù‚Ø©."
                         )
                     ]
                 });
@@ -122,34 +122,35 @@ module.exports = {
 
             const title =
                 previousTrack.info?.title ||
-                "عنوان غير معروف";
+                "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             await message.channel.send({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#808080")
                         .setDescription(
-                            `⏮️ عم تشتغل الأغنية السابقة: **${title}**`
+                            `â®ï¸ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${title}**`
                         )
                         .setFooter({
-                            text: "Yowa Music"
+                            text: "anas Music"
                         })
                 ]
             });
 
         } catch (error) {
             console.error(
-                "❌ Previous command error:",
+                "âŒ Previous command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     errorEmbed(
-                        "صار في خطأ وحنا نشغل الأغنية السابقة."
+                        "ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø´ØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+

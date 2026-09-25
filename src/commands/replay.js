@@ -1,11 +1,11 @@
-const { EmbedBuilder } = require("discord.js");
+﻿const { EmbedBuilder } = require("discord.js");
 
 function createEmbed(description) {
     return new EmbedBuilder()
         .setColor("#808080")
         .setDescription(description)
         .setFooter({
-            text: "Yowa Music"
+            text: "anas Music"
         });
 }
 
@@ -22,7 +22,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ ماكو مشغل موسيقى شغال حاليًا."
+                            "âŒ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
@@ -35,7 +35,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ لازم تكون بروم صوتي حتى تستخدم هذا الأمر."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                         )
                     ]
                 });
@@ -48,7 +48,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ لازم تكون بنفس الروم الصوتي مع البوت."
+                            "âŒ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
                     ]
                 });
@@ -60,14 +60,14 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         createEmbed(
-                            "❌ ماكو أغنية تشتغل حاليًا."
+                            "âŒ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                         )
                     ]
                 });
             }
 
             const title =
-                track.info?.title || "عنوان غير معروف";
+                track.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ";
 
             // Restart current song
             await player.seek(0);
@@ -75,24 +75,25 @@ module.exports = {
             await message.channel.send({
                 embeds: [
                     createEmbed(
-                        `🔄 عم أعيد **${title}** من البداية.`
+                        `ðŸ”„ Ø¹Ù… Ø£Ø¹ÙŠØ¯ **${title}** Ù…Ù† Ø§Ù„Ø¨Ø¯Ø§ÙŠØ©.`
                     )
                 ]
             });
 
         } catch (error) {
             console.error(
-                "❌ Replay command error:",
+                "âŒ Replay command error:",
                 error
             );
 
             await message.reply({
                 embeds: [
                     createEmbed(
-                        "❌ صار في خطأ وحنا نعيد الأغنية."
+                        "âŒ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø¹ÙŠØ¯ Ø§Ù„Ø£ØºÙ†ÙŠØ©."
                     )
                 ]
             }).catch(() => {});
         }
     }
 };
+
