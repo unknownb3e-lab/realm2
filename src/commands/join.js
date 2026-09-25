@@ -48,7 +48,6 @@ module.exports = {
 
             const welcomeEmbed = new EmbedBuilder()
                 .setColor("#2a2a2a")
-                .setTitle("🎵 أناس للموسيقى")
                 .setDescription(
                     `**مرحباً بك ${message.member.user.username}**\n\n` +
                     `✨ اكتب اسم الأغنية أو الرابط في الحقل بالأسفل`

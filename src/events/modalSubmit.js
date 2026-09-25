@@ -1,5 +1,4 @@
-const { EmbedBuilder } = require("discord.js");
-const Favorite = require("../models/Favorite");
+const { EmbedBuilder, ApplicationFlags } = require("discord.js");
 
 module.exports = {
     name: "modalSubmit",
@@ -20,7 +19,7 @@ module.exports = {
                         .setColor("#2a2a2a")
                         .setDescription("❌ الرجاء كتابة اسم الأغنية أو الرابط.")
                 ],
-                ephemeral: true
+                flags: [ApplicationFlags.Ephemeral]
             });
         }
 
@@ -34,7 +33,7 @@ module.exports = {
                             .setColor("#2a2a2a")
                             .setDescription("❌ ماكو مشغل موسيقى شغال حالياً.")
                     ],
-                    ephemeral: true
+                    flags: [ApplicationFlags.Ephemeral]
                 });
             }
 
@@ -50,7 +49,7 @@ module.exports = {
                             .setColor("#2a2a2a")
                             .setDescription("❌ ما لقيت نتائج لهاذا البحث.")
                     ],
-                    ephemeral: true
+                    flags: [ApplicationFlags.Ephemeral]
                 });
             }
 
@@ -73,7 +72,7 @@ module.exports = {
                             text: "anas Music"
                         })
                 ],
-                ephemeral: true
+                flags: [ApplicationFlags.Ephemeral]
             });
 
         } catch (error) {
@@ -85,7 +84,7 @@ module.exports = {
                         .setColor("#2a2a2a")
                         .setDescription("❌ صار في خطأ وحنا نشغل الأغنية.")
                 ],
-                ephemeral: true
+                flags: [ApplicationFlags.Ephemeral]
             }).catch(() => {});
         }
     }
