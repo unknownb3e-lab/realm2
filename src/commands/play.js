@@ -63,8 +63,17 @@ module.exports = {
                     player.voiceChannelId &&
                     player.voiceChannelId !== voiceChannel.id
                 ) {
-                    await player.setVoiceChannelId(voiceChannel.id);
                     await player.stopPlaying();
+
+                    if (player.queue?.tracks) {
+                        while (player.queue.tracks.length > 0) {
+                            player.queue.remove(0);
+                        }
+                    }
+
+                    if (player.connected) {
+                        await player.disconnect();
+                    }
                 }
 
                 player.voiceChannelId = voiceChannel.id;
