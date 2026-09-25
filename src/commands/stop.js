@@ -11,7 +11,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription("❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
                     ]
                 });
@@ -23,7 +23,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
@@ -38,7 +38,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
@@ -81,7 +81,7 @@ module.exports = {
             // ==========================================
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setDescription(
                     is247
                         ? "⏹️ ØªÙ… Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰ ÙˆØªÙØ±ÙŠØº Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©.\n🔒 **ÙˆØ¶Ø¹ 24/7 Ù…ÙØ¹Ù‘Ù„✅ ÙØ±Ø­ Ø£Ø¶Ù„ Ø¨Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ.**"
@@ -101,7 +101,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ÙˆÙ‚Ù Ø§Ù„Ù…ÙˆØ³ÙŠÙ‚Ù‰."
                         )

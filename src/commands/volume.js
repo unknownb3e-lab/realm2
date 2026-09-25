@@ -2,7 +2,7 @@
 
 function errorEmbed(description) {
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setDescription(`❌ ${description}`);
 }
 
@@ -68,7 +68,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 `🔊 Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø§Ù„Ø­Ø§Ù„ÙŠ: **${currentVolume}%**`
                             )
@@ -120,7 +120,7 @@ module.exports = {
             // ==========================================
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setDescription(
                     `🔊 ØªÙ… Ø¶Ø¨Ø· Ù…Ø³ØªÙˆÙ‰ Ø§Ù„ØµÙˆØª Ø¹Ù„Ù‰ **${volume}%**.`
                 )

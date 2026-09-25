@@ -2,7 +2,7 @@
 
 function createEmbed(description) {
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setDescription(description)
         .setFooter({
             text: "anas Music"

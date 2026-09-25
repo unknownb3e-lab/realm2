@@ -12,7 +12,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§."
                             )
@@ -26,7 +26,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
@@ -41,7 +41,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
@@ -55,7 +55,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„."
                             )
@@ -86,7 +86,7 @@ module.exports = {
             // ==========================================
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setDescription(
                     `⏭️ ØªÙ… ØªØ®Ø·ÙŠ **${skippedTitle}**.`
                 )
@@ -107,7 +107,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†ØªØ®Ø·Ù‰ Ø§Ù„Ø£ØºÙ†ÙŠØ©."
                         )

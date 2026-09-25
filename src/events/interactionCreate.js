@@ -23,7 +23,7 @@ if (
             return interaction.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription("❌ Ù…Ø§ÙƒÙˆ Ù…Ø´ØºÙ„ Ù…ÙˆØ³ÙŠÙ‚Ù‰ Ø´ØºØ§Ù„ Ø­Ø§Ù„ÙŠÙ‹Ø§.")
                 ],
                 ephemeral: true
@@ -36,7 +36,7 @@ if (
             return interaction.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ­ÙƒÙ…."
                         )
@@ -52,7 +52,7 @@ if (
             return interaction.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                         )
@@ -65,18 +65,17 @@ if (
             switch (interaction.customId) {
 
                 // =========================
-                // PAUSE / RESUME
+                // PLAY / PAUSE
                 // =========================
 
-                case "music_pause": {
-
+                case "music_playpause": {
                     if (player.paused) {
                         await player.resume();
 
                         const row = interaction.message.components[0];
 
                         const updatedButtons = row.components.map(button => {
-                            if (button.customId === "music_pause") {
+                            if (button.customId === "music_playpause") {
                                 return {
                                     type: 2,
                                     style: 2,
@@ -84,7 +83,7 @@ if (
                                     emoji: {
                                         name: "⏸️"
                                     },
-                                    custom_id: "music_pause"
+                                    custom_id: "music_playpause"
                                 };
                             }
 
@@ -108,7 +107,7 @@ if (
                     const row = interaction.message.components[0];
 
                     const updatedButtons = row.components.map(button => {
-                        if (button.customId === "music_pause") {
+                        if (button.customId === "music_playpause") {
                             return {
                                 type: 2,
                                 style: 2,
@@ -116,7 +115,7 @@ if (
                                 emoji: {
                                     name: "▶️"
                                 },
-                                custom_id: "music_pause"
+                                custom_id: "music_playpause"
                             };
                         }
 
@@ -136,52 +135,10 @@ if (
                 }
 
                 // =========================
-                // SKIP
-                // =========================
-
-                case "music_skip": {
-
-                    const currentTrack = player.queue.current;
-
-                    if (!currentTrack) {
-                        return interaction.reply({
-                            embeds: [
-                                new EmbedBuilder()
-                                    .setColor("#808080")
-                                    .setDescription(
-                                        "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© ØªØ´ØªØºÙ„."
-                                    )
-                            ],
-                            ephemeral: true
-                        });
-                    }
-
-                    // Save current track to history
-                    addHistory(
-                        interaction.guildId,
-                        currentTrack
-                    );
-
-                    await player.skip();
-
-                    await interaction.reply({
-                        embeds: [
-                            new EmbedBuilder()
-                                .setColor("#808080")
-                                .setDescription("⏭️ ØªÙ… ØªØ®Ø·ÙŠ Ø§Ù„Ø£ØºÙ†ÙŠØ©.")
-                        ],
-                        ephemeral: true
-                    });
-
-                    break;
-                }
-
-                // =========================
                 // STOP
                 // =========================
 
                 case "music_stop": {
-
                     await player.stopPlaying();
                     await player.disconnect();
 
@@ -193,56 +150,56 @@ if (
                 }
 
                 // =========================
-                // PREVIOUS
+                // VOLUME UP
                 // =========================
 
-                case "music_previous": {
+                case "music_volup": {
+                    const currentVolume = player.volume ?? 75;
+                    const newVolume = Math.min(100, currentVolume + 10);
 
-                    const previousTrack = getPrevious(
-                        interaction.guildId
-                    );
+                    await player.setVolume(newVolume);
 
-                    if (!previousTrack) {
-                        return interaction.reply({
-                            embeds: [
-                                new EmbedBuilder()
-                                    .setColor("#808080")
-                                    .setDescription(
-                                        "❌ Ù…Ø§ÙƒÙˆ Ø£ØºÙ†ÙŠØ© Ø³Ø§Ø¨Ù‚Ø©."
-                                    )
-                            ],
-                            ephemeral: true
-                        });
-                    }
-
-                    const currentTrack = player.queue.current;
-
-                    // Save current track so it can be returned to later
-                    if (currentTrack) {
-                        addHistory(
-                            interaction.guildId,
-                            currentTrack
-                        );
-                    }
-
-                    // Stop current track
-                    await player.stopPlaying();
-
-                    // Add previous track normally
-                    player.queue.add(previousTrack);
-
-                    // Play previous track
-                    await player.play();
-
-                    await interaction.reply({
+                    await interaction.update({
                         embeds: [
                             new EmbedBuilder()
-                                .setColor("#808080")
+                                .setColor("#2a2a2a")
+                                .setTitle("🔊 تم رفع الصوت")
                                 .setDescription(
-                                    `⏮️ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${previousTrack.info?.title || "Ø¹Ù†ÙˆØ§Ù† ØºÙŠØ± Ù…Ø¹Ø±ÙˆÙ"}**`
+                                    `مستوى الصوت الحالي: **${newVolume}%**`
                                 )
+                                .setFooter({
+                                    text: "anas Music"
+                                })
                         ],
-                        ephemeral: true
+                        components: interaction.message.components
+                    });
+
+                    break;
+                }
+
+                // =========================
+                // VOLUME DOWN
+                // =========================
+
+                case "music_voldown": {
+                    const currentVolume = player.volume ?? 75;
+                    const newVolume = Math.max(0, currentVolume - 10);
+
+                    await player.setVolume(newVolume);
+
+                    await interaction.update({
+                        embeds: [
+                            new EmbedBuilder()
+                                .setColor("#2a2a2a")
+                                .setTitle("🔉 تم تخفيض الصوت")
+                                .setDescription(
+                                    `مستوى الصوت الحالي: **${newVolume}%**`
+                                )
+                                .setFooter({
+                                    text: "anas Music"
+                                })
+                        ],
+                        components: interaction.message.components
                     });
 
                     break;
@@ -256,7 +213,7 @@ if (
                 await interaction.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø²Ø±."
                             )

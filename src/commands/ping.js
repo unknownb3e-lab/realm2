@@ -22,7 +22,7 @@ module.exports = {
             }
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setAuthor({
                     name: "anas Music • حالة النظام"
                 })
@@ -68,7 +68,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ ما قدرت افحص اتصال البوت."
                         )

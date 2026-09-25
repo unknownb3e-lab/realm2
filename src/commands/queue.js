@@ -18,7 +18,7 @@ function formatDuration(ms) {
 
 function errorEmbed(description) {
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setDescription(`❌ ${description}`);
 }
 
@@ -125,7 +125,7 @@ module.exports = {
             // ==========================================
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setTitle("🎵 Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ")
                 .setDescription(description)
                 .setFooter({

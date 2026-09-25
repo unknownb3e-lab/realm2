@@ -7,7 +7,7 @@ const {
 
 function errorEmbed(description) {
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setDescription(`❌ ${description}`);
 }
 
@@ -127,7 +127,7 @@ module.exports = {
             await message.channel.send({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             `⏮️ Ø¹Ù… ØªØ´ØªØºÙ„ Ø§Ù„Ø£ØºÙ†ÙŠØ© Ø§Ù„Ø³Ø§Ø¨Ù‚Ø©: **${title}**`
                         )

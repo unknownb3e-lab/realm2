@@ -13,7 +13,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ø£Ù†Ø§ Ù…Ùˆ Ù…ØªØµÙ„ Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ."
                             )
@@ -27,7 +27,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ø±ÙˆÙ… ØµÙˆØªÙŠ Ø­ØªÙ‰ ØªØ³ØªØ®Ø¯Ù… Ù‡Ø°Ø§ Ø§Ù„Ø£Ù…Ø±."
                             )
@@ -42,7 +42,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "❌ Ù„Ø§Ø²Ù… ØªÙƒÙˆÙ† Ø¨Ù†ÙØ³ Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ Ù…Ø¹ Ø§Ù„Ø¨ÙˆØª."
                             )
@@ -61,7 +61,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 "🔒 **ÙˆØ¶Ø¹ 24/7 Ù…ÙØ¹Ù‘Ù„.**\n\nÙ…Ø§ Ø£Ù‚Ø¯Ø± Ø£Ø·Ù„Ø¹ Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ ÙˆÙ‡Ùˆ Ø´ØºØ§Ù„."
                             )
@@ -108,7 +108,7 @@ module.exports = {
             // ==========================================
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setTitle("👋 ØªÙ… Ù‚Ø·Ø¹ Ø§Ù„Ø§ØªØµØ§Ù„")
                 .setDescription(
                     "Ø·Ù„Ø¹Øª Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ ÙˆÙØ±Ù‘ØºØª Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£ØºØ§Ù†ÙŠ."
@@ -130,7 +130,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ ØµØ§Ø± ÙÙŠ Ø®Ø·Ø£ ÙˆØ­Ù†Ø§ Ù†Ø·Ù„Ø¹ Ù…Ù† Ø§Ù„Ø±ÙˆÙ… Ø§Ù„ØµÙˆØªÙŠ."
                         )

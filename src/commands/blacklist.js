@@ -6,7 +6,7 @@ const Blacklist = require("../models/Blacklist");
 
 function createEmbed(description) {
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setDescription(description)
         .setFooter({
             text: "anas"
@@ -72,7 +72,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setTitle("🚫 Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ø§Ù„Ù…Ø­Ø¸ÙˆØ±ÙŠÙ†")
                             .setDescription(list)
                             .setFooter({

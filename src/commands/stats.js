@@ -74,7 +74,7 @@ module.exports = {
 
             const embed =
                 new EmbedBuilder()
-                    .setColor("#808080")
+                    .setColor("#2a2a2a")
                     .setTitle("📊 إحصائيات anas")
                     .setDescription(
                         "هاي إحصائياتي الحية الحالية."
@@ -147,7 +147,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ صار في خطأ وحنا نجيب إحصائيات البوت."
                         )

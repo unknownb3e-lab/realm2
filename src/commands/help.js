@@ -59,10 +59,10 @@ function makeEmbed(category, page, totalPages, client) {
         const userCount = client.guilds.cache.reduce((total, guild) => total + (guild.memberCount || 0), 0);
 
         return new EmbedBuilder()
-            .setColor("#808080")
+            .setColor("#2a2a2a")
             .setTitle(`${data.emoji} ${data.name}`)
             .setDescription(
-                `**بوت اغاني محترف**\n\n` +
+                `**بوت اغاني احترافي**\n\n` +
                 `**المطور:** anas\n` +
                 `**السيرفرات:** \`${guildCount}\`\n` +
                 `**المستخدمين:** \`${userCount.toLocaleString()}\``
@@ -91,7 +91,7 @@ function makeEmbed(category, page, totalPages, client) {
     }
 
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setTitle(
             `${data.emoji} أوامر ${data.name} — صفحة ${page + 1}/${totalPages}`
         )
@@ -339,7 +339,7 @@ module.exports = {
             await message.reply({
                 embeds: [
                     new EmbedBuilder()
-                        .setColor("#808080")
+                        .setColor("#2a2a2a")
                         .setDescription(
                             "❌ صار في خطأ وحنا نفتح قائمة المساعدة."
                         )

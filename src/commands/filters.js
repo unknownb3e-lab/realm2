@@ -5,7 +5,7 @@ module.exports = {
 
     async execute({ message }) {
         const embed = new EmbedBuilder()
-            .setColor("#808080")
+            .setColor("#2a2a2a")
             .setAuthor({
                 name: "anas Music —¢ ÙÙ„Ø§ØªØ± Ø§Ù„ØµÙˆØª"
             })

@@ -2,7 +2,7 @@
 
 function errorEmbed(description) {
     return new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setDescription(`❌ ${description}`);
 }
 
@@ -70,7 +70,7 @@ module.exports = {
                 return message.reply({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor("#808080")
+                            .setColor("#2a2a2a")
                             .setDescription(
                                 `🔁 ÙˆØ¶Ø¹ Ø§Ù„ØªÙƒØ±Ø§Ø± Ø§Ù„Ø­Ø§Ù„ÙŠ: **${displayMode}**\n\n` +
                                 `Ø§Ø³ØªØ®Ø¯Ù… \`>loop off\`✅ \`>loop song\` Ø£Ùˆ \`>loop queue\`.`
@@ -128,7 +128,7 @@ module.exports = {
             }
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setDescription(description)
                 .setFooter({
                     text: "anas Music"

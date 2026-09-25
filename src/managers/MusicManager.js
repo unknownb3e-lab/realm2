@@ -276,7 +276,7 @@ function createMusicManager(client) {
                 player.volume ?? 75;
 
             const embed = new EmbedBuilder()
-                .setColor("#808080")
+                .setColor("#2a2a2a")
                 .setTitle(title)
                 .setDescription(
                     `**${author}**\n\n` +
@@ -295,23 +295,23 @@ function createMusicManager(client) {
                 new ActionRowBuilder().addComponents(
 
                     new ButtonBuilder()
-                        .setCustomId("music_previous")
-                        .setEmoji("⏮️")
-                        .setStyle(ButtonStyle.Secondary),
-
-                    new ButtonBuilder()
-                        .setCustomId("music_pause")
-                        .setEmoji("⏸️")
-                        .setStyle(ButtonStyle.Secondary),
-
-                    new ButtonBuilder()
-                        .setCustomId("music_skip")
-                        .setEmoji("⏭️")
+                        .setCustomId("music_playpause")
+                        .setEmoji("⏯️")
                         .setStyle(ButtonStyle.Secondary),
 
                     new ButtonBuilder()
                         .setCustomId("music_stop")
                         .setEmoji("⏹️")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("music_voldown")
+                        .setEmoji("🔉")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("music_volup")
+                        .setEmoji("🔊")
                         .setStyle(ButtonStyle.Secondary)
                 );
 

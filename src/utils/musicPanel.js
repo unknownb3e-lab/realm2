@@ -32,7 +32,7 @@ function createMusicPanel(track) {
         null;
 
     const embed = new EmbedBuilder()
-        .setColor("#808080")
+        .setColor("#2a2a2a")
         .setTitle(title)
         .setDescription(
             `**${author}**\n\n` +
